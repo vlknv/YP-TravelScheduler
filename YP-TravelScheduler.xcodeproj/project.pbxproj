@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		780732092B9374BB008A184D /* YP_TravelSchedulerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780732082B9374BB008A184D /* YP_TravelSchedulerApp.swift */; };
+		780732092B9374BB008A184D /* YPTravelSchedulerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780732082B9374BB008A184D /* YPTravelSchedulerApp.swift */; };
 		7807320B2B9374BB008A184D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7807320A2B9374BB008A184D /* ContentView.swift */; };
 		7807320D2B9374BD008A184D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7807320C2B9374BD008A184D /* Assets.xcassets */; };
 		7C6C1C14E60D840391B5308B /* Pods_YP_TravelScheduler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA3C73B34F8CB5FD397B411 /* Pods_YP_TravelScheduler.framework */; };
@@ -17,7 +17,7 @@
 		09E6CB95C4234ABE828DC300 /* Pods-YP-TravelScheduler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YP-TravelScheduler.release.xcconfig"; path = "Target Support Files/Pods-YP-TravelScheduler/Pods-YP-TravelScheduler.release.xcconfig"; sourceTree = "<group>"; };
 		23B55C735DFF7F75C7679274 /* Pods-YP-TravelScheduler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YP-TravelScheduler.debug.xcconfig"; path = "Target Support Files/Pods-YP-TravelScheduler/Pods-YP-TravelScheduler.debug.xcconfig"; sourceTree = "<group>"; };
 		780732052B9374BB008A184D /* YP-TravelScheduler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YP-TravelScheduler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		780732082B9374BB008A184D /* YP_TravelSchedulerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YP_TravelSchedulerApp.swift; sourceTree = "<group>"; };
+		780732082B9374BB008A184D /* YPTravelSchedulerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YPTravelSchedulerApp.swift; sourceTree = "<group>"; };
 		7807320A2B9374BB008A184D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7807320C2B9374BD008A184D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9FA3C73B34F8CB5FD397B411 /* Pods_YP_TravelScheduler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YP_TravelScheduler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,7 +56,7 @@
 		780732072B9374BB008A184D /* YP-TravelScheduler */ = {
 			isa = PBXGroup;
 			children = (
-				780732082B9374BB008A184D /* YP_TravelSchedulerApp.swift */,
+				780732082B9374BB008A184D /* YPTravelSchedulerApp.swift */,
 				7807320A2B9374BB008A184D /* ContentView.swift */,
 				7807320C2B9374BD008A184D /* Assets.xcassets */,
 			);
@@ -196,7 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7807320B2B9374BB008A184D /* ContentView.swift in Sources */,
-				780732092B9374BB008A184D /* YP_TravelSchedulerApp.swift in Sources */,
+				780732092B9374BB008A184D /* YPTravelSchedulerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
