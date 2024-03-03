@@ -6,17 +6,41 @@
 	objectVersion = 56;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = AE7B4FB01588B9E6DF09CB79FC7CE7BD /* Build configuration list for PBXAggregateTarget "SwiftLint" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = SwiftLint;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		442082DD0A52669E1DE057E7E91CEDF1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		7330AF3D79458C4E9AF6441CFEC7A318 /* Pods-YP-TravelScheduler-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 979AC1FFEEA92B44291F166E9D4731BB /* Pods-YP-TravelScheduler-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A1AC3BFE924189345CD99FC97E333100 /* Pods-YP-TravelScheduler-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 83027B25A33C4ADF81DB8985E4D00BAC /* Pods-YP-TravelScheduler-dummy.m */; };
+		2FDDA11FC49014FD268515331CB71A79 /* Pods-YP-TravelScheduler-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 979AC1FFEEA92B44291F166E9D4731BB /* Pods-YP-TravelScheduler-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		69ABBB65BA4A6A243C30CEE8CB9B8B80 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		C69201E944BD9D6F4448E8018507DE1F /* Pods-YP-TravelScheduler-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 83027B25A33C4ADF81DB8985E4D00BAC /* Pods-YP-TravelScheduler-dummy.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8B6AF89803AC977CA34261A62C2B7FFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52B60EC2A583F24ACBB69C113F5488B9;
+			remoteInfo = SwiftLint;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		12ACCF3122F5619BA58D4F3AF700F01C /* Pods-YP-TravelScheduler-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YP-TravelScheduler-acknowledgements.plist"; sourceTree = "<group>"; };
+		3EC0124719FE8EF5FDDD72C26F8A2F57 /* SwiftLint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.debug.xcconfig; sourceTree = "<group>"; };
 		494EF6C208746F89E955B6B8789D60D6 /* Pods-YP-TravelScheduler-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-YP-TravelScheduler-acknowledgements.markdown"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		79336EE9BFB65EE5EF99529A0FC76EB1 /* Pods-YP-TravelScheduler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YP-TravelScheduler.release.xcconfig"; sourceTree = "<group>"; };
+		7EAB1DA481EDDC005A251D3A5E6BE4CD /* SwiftLint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.release.xcconfig; sourceTree = "<group>"; };
 		83027B25A33C4ADF81DB8985E4D00BAC /* Pods-YP-TravelScheduler-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-YP-TravelScheduler-dummy.m"; sourceTree = "<group>"; };
 		979AC1FFEEA92B44291F166E9D4731BB /* Pods-YP-TravelScheduler-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-YP-TravelScheduler-umbrella.h"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -27,11 +51,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		66C8FF67927328575BFD2EF50E6F3E3D /* Frameworks */ = {
+		BCE385D8B2FD2E6AE176CE35518FFF4A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				442082DD0A52669E1DE057E7E91CEDF1 /* Foundation.framework in Frameworks */,
+				69ABBB65BA4A6A243C30CEE8CB9B8B80 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +86,24 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		7FDA596DBE0337ACDFE55A210D54EF26 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3EC0124719FE8EF5FDDD72C26F8A2F57 /* SwiftLint.debug.xcconfig */,
+				7EAB1DA481EDDC005A251D3A5E6BE4CD /* SwiftLint.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftLint";
+			sourceTree = "<group>";
+		};
+		965877409E01FB3D85D85E90E6B30185 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D96179D43A67C5D5323B0682D32C133C /* SwiftLint */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A3EAD76782ADE7E2F0E214B2C11A816F /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +125,7 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				965877409E01FB3D85D85E90E6B30185 /* Pods */,
 				A3EAD76782ADE7E2F0E214B2C11A816F /* Products */,
 				C09E6F5C7B2593C303A57D1D3A3DAEFA /* Targets Support Files */,
 			);
@@ -96,14 +139,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D96179D43A67C5D5323B0682D32C133C /* SwiftLint */ = {
+			isa = PBXGroup;
+			children = (
+				7FDA596DBE0337ACDFE55A210D54EF26 /* Support Files */,
+			);
+			name = SwiftLint;
+			path = SwiftLint;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		9F661C9675237B80A21391D058AAE5D0 /* Headers */ = {
+		291E242B90E81B11FE36C7FBDA186613 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7330AF3D79458C4E9AF6441CFEC7A318 /* Pods-YP-TravelScheduler-umbrella.h in Headers */,
+				2FDDA11FC49014FD268515331CB71A79 /* Pods-YP-TravelScheduler-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,16 +164,17 @@
 /* Begin PBXNativeTarget section */
 		2042BD424FD9A8E62AD005623A307563 /* Pods-YP-TravelScheduler */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4C8E3E14E13DC9DC1C4E36F2546C9091 /* Build configuration list for PBXNativeTarget "Pods-YP-TravelScheduler" */;
+			buildConfigurationList = E193563CBF900AD220F59BB05C37ECF5 /* Build configuration list for PBXNativeTarget "Pods-YP-TravelScheduler" */;
 			buildPhases = (
-				9F661C9675237B80A21391D058AAE5D0 /* Headers */,
-				705DA87BA89BEE5E759607B183A01B51 /* Sources */,
-				66C8FF67927328575BFD2EF50E6F3E3D /* Frameworks */,
-				27917994264717F2B06B6F07AB970777 /* Resources */,
+				291E242B90E81B11FE36C7FBDA186613 /* Headers */,
+				0BFC5878B3AAC4ED0138D4E1A0B20883 /* Sources */,
+				BCE385D8B2FD2E6AE176CE35518FFF4A /* Frameworks */,
+				5F98DD212729BAACEA36608084873759 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				88993670FB870D95CCC2F3B8729B5549 /* PBXTargetDependency */,
 			);
 			name = "Pods-YP-TravelScheduler";
 			productName = Pods_YP_TravelScheduler;
@@ -151,12 +204,13 @@
 			projectRoot = "";
 			targets = (
 				2042BD424FD9A8E62AD005623A307563 /* Pods-YP-TravelScheduler */,
+				52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		27917994264717F2B06B6F07AB970777 /* Resources */ = {
+		5F98DD212729BAACEA36608084873759 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -166,18 +220,45 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		705DA87BA89BEE5E759607B183A01B51 /* Sources */ = {
+		0BFC5878B3AAC4ED0138D4E1A0B20883 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1AC3BFE924189345CD99FC97E333100 /* Pods-YP-TravelScheduler-dummy.m in Sources */,
+				C69201E944BD9D6F4448E8018507DE1F /* Pods-YP-TravelScheduler-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		88993670FB870D95CCC2F3B8729B5549 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftLint;
+			target = 52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */;
+			targetProxy = 8B6AF89803AC977CA34261A62C2B7FFF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		5AFF57BD15F691D3940C34E4413A5129 /* Release */ = {
+		26EA5A9600226D2B7D8D25152A304F3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EAB1DA481EDDC005A251D3A5E6BE4CD /* SwiftLint.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8BE1C16DBA0697E5388B5F72891EEA39 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 79336EE9BFB65EE5EF99529A0FC76EB1 /* Pods-YP-TravelScheduler.release.xcconfig */;
 			buildSettings = {
@@ -343,7 +424,7 @@
 			};
 			name = Release;
 		};
-		C08EC737799E91740119FAE902E05191 /* Debug */ = {
+		E46A77C97580DB966CD8E64F4C7ECAAA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A7E26A2CF9D32E0C6C2A6A3B28F46377 /* Pods-YP-TravelScheduler.debug.xcconfig */;
 			buildSettings = {
@@ -380,6 +461,23 @@
 			};
 			name = Debug;
 		};
+		E9E1A48A750B946DE9877594C6E735E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3EC0124719FE8EF5FDDD72C26F8A2F57 /* SwiftLint.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -392,11 +490,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4C8E3E14E13DC9DC1C4E36F2546C9091 /* Build configuration list for PBXNativeTarget "Pods-YP-TravelScheduler" */ = {
+		AE7B4FB01588B9E6DF09CB79FC7CE7BD /* Build configuration list for PBXAggregateTarget "SwiftLint" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C08EC737799E91740119FAE902E05191 /* Debug */,
-				5AFF57BD15F691D3940C34E4413A5129 /* Release */,
+				E9E1A48A750B946DE9877594C6E735E4 /* Debug */,
+				26EA5A9600226D2B7D8D25152A304F3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E193563CBF900AD220F59BB05C37ECF5 /* Build configuration list for PBXNativeTarget "Pods-YP-TravelScheduler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E46A77C97580DB966CD8E64F4C7ECAAA /* Debug */,
+				8BE1C16DBA0697E5388B5F72891EEA39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
