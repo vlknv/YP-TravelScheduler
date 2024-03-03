@@ -1,0 +1,6 @@
+framework module Pods_YP_TravelScheduler {
+  umbrella header "Pods-YP-TravelScheduler-umbrella.h"
+
+  export *
+  module * { export * }
+}
