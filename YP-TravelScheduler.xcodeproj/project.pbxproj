@@ -11,6 +11,7 @@
 		7807320B2B9374BB008A184D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7807320A2B9374BB008A184D /* ContentView.swift */; };
 		7807320D2B9374BD008A184D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7807320C2B9374BD008A184D /* Assets.xcassets */; };
 		7807321A2B94E5BA008A184D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 780732192B94E5BA008A184D /* Colors.xcassets */; };
+		7807321C2B94E65B008A184D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 7807321B2B94E65B008A184D /* Localizable.xcstrings */; };
 		D07701DEB248686B5745132C /* Pods_YP_TravelScheduler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA11CDCC97748143EA42B29 /* Pods_YP_TravelScheduler.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,6 +22,7 @@
 		7807320A2B9374BB008A184D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7807320C2B9374BD008A184D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		780732192B94E5BA008A184D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		7807321B2B94E65B008A184D /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		9C37A5BDDD68F64FD04D07BE /* Pods-YP-TravelScheduler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YP-TravelScheduler.release.xcconfig"; path = "Target Support Files/Pods-YP-TravelScheduler/Pods-YP-TravelScheduler.release.xcconfig"; sourceTree = "<group>"; };
 		AEA11CDCC97748143EA42B29 /* Pods_YP_TravelScheduler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YP_TravelScheduler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -60,6 +62,7 @@
 			children = (
 				780732082B9374BB008A184D /* YPTravelSchedulerApp.swift */,
 				7807320A2B9374BB008A184D /* ContentView.swift */,
+				7807321B2B94E65B008A184D /* Localizable.xcstrings */,
 				780732192B94E5BA008A184D /* Colors.xcassets */,
 				7807320C2B9374BD008A184D /* Assets.xcassets */,
 			);
@@ -128,6 +131,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 780731FC2B9374BB008A184D;
 			productRefGroup = 780732062B9374BB008A184D /* Products */;
@@ -146,6 +150,7 @@
 			files = (
 				7807320D2B9374BD008A184D /* Assets.xcassets in Resources */,
 				7807321A2B94E5BA008A184D /* Colors.xcassets in Resources */,
+				7807321C2B94E65B008A184D /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
