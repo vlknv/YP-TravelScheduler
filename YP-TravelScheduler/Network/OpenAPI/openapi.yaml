@@ -419,6 +419,35 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Carriers'
+  /v3.0/copyright/:
+    get:
+      tags:
+      - getCopyright
+      summary: Копирайт Яндекс Расписаний
+      operationId: getCopyright
+      parameters:
+      - name: apikey
+        in: query
+        description: API key
+        required: true
+        schema:
+          type: string
+      - name: format
+        in: query
+        description: формат ответа
+        required: false
+        schema:
+          type: string
+          enum:
+            - json
+            - xml
+      responses:
+        "200":
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Copyright'
 components:
   schemas:
     NearestStations:
@@ -874,4 +903,27 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Carrier'
-
+    Copyright:
+      type: object
+      properties:
+        copyright:
+          $ref: '#/components/schemas/Copyright_Item'
+    Copyright_Item:
+        type: object
+        properties:
+          logo_vm:
+            type: string
+          url:
+            type: string
+          logo_vd:
+            type: string
+          logo_hy:
+            type: string
+          logo_hd:
+            type: string
+          logo_vy:
+            type: string
+          text:
+            type: string
+          logo_hm:
+            type: string
