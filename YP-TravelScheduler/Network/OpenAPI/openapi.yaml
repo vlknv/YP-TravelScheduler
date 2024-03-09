@@ -419,6 +419,43 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Carriers'
+  /v3.0/stations_list/:
+    get:
+      tags:
+      - getAllStations
+      summary: Список всех доступных станций
+      operationId: getAllStations
+      parameters:
+      - name: apikey
+        in: query
+        description: API key
+        required: true
+        schema:
+          type: string
+      - name: lang
+        in: query
+        description: lang
+        required: false
+        schema:
+          type: string
+      - name: format
+        in: query
+        description: формат ответа
+        required: false
+        schema:
+          type: string
+          enum:
+            - json
+            - xml
+      responses:
+        "200":
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Stations'
+            text/html:
+              schema: {}
   /v3.0/copyright/:
     get:
       tags:
@@ -903,6 +940,100 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Carrier'
+    Stations:
+      type: object
+      properties:
+        countries:
+          type: array
+          items:
+            $ref: '#/components/schemas/Country'
+    Country:
+      type: object
+      properties:
+        title:
+          type: string
+        codes:
+          $ref: '#/components/schemas/RegionCode'
+        regions:
+          type: array
+          items:
+            $ref: '#/components/schemas/Region'
+    Region:
+      type: object
+      properties:
+        title:
+          type: string
+        codes:
+          $ref: '#/components/schemas/RegionCode'
+        settlements:
+          type: array
+          items:
+            $ref: '#/components/schemas/Settlement'
+    Settlement:
+      type: object
+      properties:
+        title:
+          type: string
+        codes:
+          $ref: '#/components/schemas/RegionCode'
+        stations:
+          type: array
+          items:
+            $ref: '#/components/schemas/SettlementStation'
+    SettlementStation:
+      type: object
+      properties:
+        title:
+          type: string
+        codes:
+          $ref: '#/components/schemas/StationCode'
+        station_type:
+          type: string
+          enum:
+            - station
+            - platform
+            - stop
+            - checkpoint
+            - post
+            - crossing
+            - overtaking_point
+            - train_station
+            - airport
+            - bus_station
+            - bus_stop
+            - unknown
+            - port
+            - port_point
+            - wharf
+            - river_port
+            - marine_station
+        transport_type:
+          type: string
+          enum:
+            - plane
+            - train
+            - suburban
+            - bus
+            - water
+            - helicopter
+        longitude:
+          type: number
+        latitude:
+          type: number
+        direction:
+          type: string
+    RegionCode:
+      type: object
+      properties:
+        yandex_code:
+          type: string
+    StationCode:
+      type: object
+      properties:
+        esr_code:
+          type: string
+        yandex_code:
+          type: string
     Copyright:
       type: object
       properties:
