@@ -59,6 +59,109 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/NearestStations'
+  /v3.0/search/:
+    get:
+      tags:
+      - getSchedule
+      summary: Расписание рейсов между станциями
+      operationId: getSchedule
+      parameters:
+      - name: apikey
+        in: query
+        description: API key
+        required: true
+        schema:
+          type: string
+      - name: from
+        in: query
+        description: Cтанция отправления
+        required: true
+        schema:
+          type: string
+      - name: to
+        in: query
+        description: Cтанция прибытия
+        required: true
+        schema:
+          type: string
+      - name: format
+        in: query
+        description: Формат ответа
+        required: false
+        schema:
+          type: string
+          enum: [json, xml]
+      - name: lang
+        in: query
+        description: Язык ответа
+        required: false
+        schema:
+          type: string
+      - name: date
+        in: query
+        description: Дата
+        required: false
+        schema:
+          type: string
+          format: date
+      - name: transport_types
+        in: query
+        description: Тип транспорта
+        required: false
+        schema:
+          type: string
+          enum: [plane, train, suburban, bus, water, helicopter]
+      - name: system
+        in: query
+        description: Системак кодирования
+        required: false
+        schema:
+          type: string
+          enum: [yandex, iata, sirena, express, esr]
+      - name: show_systems
+        in: query
+        description: Системак кодирования
+        required: false
+        schema:
+          type: string
+          enum: [yandex, esr]
+      - name: offset
+        in: query
+        description: Смещение
+        required: false
+        schema:
+          type: integer
+      - name: limit
+        in: query
+        description: Лимит ответа
+        required: false
+        schema:
+          type: integer
+      - name: add_days_mask
+        in: query
+        description: Возвращать календарь хождения
+        required: false
+        schema:
+          type: boolean
+      - name: result_timezone
+        in: query
+        description: Часовой пояс
+        required: false
+        schema:
+          type: string
+      - name: transfers
+        in: query
+        description: Добавить маршруты с пересадками
+        required: false
+        schema:
+          type: boolean
+      responses:
+        "200":
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StationsSchedule'
 components:
   schemas:
     NearestStations:
@@ -115,3 +218,234 @@ components:
           type: string
         touch_url:
           type: string
+    StationsSchedule:
+      type: object
+      properties:
+        pagination:
+          $ref: '#/components/schemas/Pagination'
+        interval_segments:
+          type: array
+          items:
+            $ref: '#/components/schemas/Interval_segment'
+        segments:
+          type: array
+          items:
+            $ref: '#/components/schemas/Segment'
+        search:
+          $ref: '#/components/schemas/Search'
+    Pagination:
+      type: object
+      properties:
+        total:
+          type: integer
+        limit:
+          type: integer
+        offset:
+          type: integer
+    Interval_segment:
+      type: object
+      properties:
+        from:
+          $ref: '#/components/schemas/From'
+        thread:
+          $ref: '#/components/schemas/Thread'
+        departure_platform:
+          type: string
+        stops:
+          type: string
+        departure_terminal:
+          type: string
+        to:
+          $ref: '#/components/schemas/To'
+        has_transfers:
+          type: boolean
+        tickets_info:
+          $ref: '#/components/schemas/Tickets_info'
+        duration:
+          type: integer
+        arrival_terminal:
+          type: string
+        start_date:
+          type: string
+        arrival_platform:
+          type: string
+    Segment:
+      type: object
+      properties:
+        arrival:
+          type: string
+        from:
+          $ref: '#/components/schemas/From'
+        thread:
+          $ref: '#/components/schemas/Thread'
+        departure_platform:
+          type: string
+        departure:
+          type: string
+        stops:
+          type: string
+        departure_terminal:
+          type: string
+        to:
+          $ref: '#/components/schemas/To'
+        has_transfers:
+          type: boolean
+        tickets_info:
+          $ref: '#/components/schemas/Tickets_info'
+        duration:
+          type: integer
+        arrival_terminal:
+          type: string
+        start_date:
+          type: string
+        arrival_platform:
+          type: string
+    Search:
+      type: object
+      properties:
+        date:
+          type: string
+        to:
+          $ref: '#/components/schemas/To'
+        from:
+          $ref: '#/components/schemas/From'
+    From:
+      type: object
+      properties:
+        code:
+          type: string
+        title:
+          type: string
+        station_type:
+          type: string
+        station_type_name:
+          type: string
+        popular_title:
+          type: string
+        short_title:
+          type: string
+        transport_type:
+          type: string
+        type:
+          type: string
+    Thread:
+      type: object
+      properties:
+        uid:
+          type: string
+        title:
+          type: string
+        interval:
+          $ref: '#/components/schemas/Interval'
+        number:
+          type: string
+        short_title:
+          type: string
+        thread_method_link:
+          type: string
+        carrier:
+          $ref: '#/components/schemas/Carrier'
+        transport_type:
+          type: string
+        vehicle:
+          type: string
+        transport_subtype:
+          $ref: '#/components/schemas/Transport_subtype'
+        express_type:
+          type: string
+    To:
+      type: object
+      properties:
+        code:
+          type: string
+        title:
+          type: string
+        station_type:
+          type: string
+        station_type_name:
+          type: string
+        popular_title:
+          type: string
+        short_title:
+          type: string
+        transport_type:
+          type: string
+        type:
+          type: string
+    Tickets_info:
+      type: object
+      properties:
+        et_marker:
+          type: boolean
+        places:
+          type: array
+          items:
+            $ref: '#/components/schemas/Place'
+    Place:
+      type: object
+      properties:
+        currency:
+          type: string
+        price:
+          $ref: '#/components/schemas/Price'
+        name:
+          type: string
+    Price:
+      type: object
+      properties:
+        cents:
+          type: integer
+        whole:
+          type: integer
+    Interval:
+      type: object
+      properties:
+        density:
+          type: string
+        end_time:
+          type: string
+        begin_time:
+          type: string
+    Carrier:
+      type: object
+      properties:
+        code:
+          type: integer
+        contacts:
+          type: string
+        url:
+          type: string
+        logo_svg:
+          type: string
+        title:
+          type: string
+        phone:
+          type: string
+        codes:
+          $ref: '#/components/schemas/Codes'
+        address:
+          type: string
+        logo:
+          type: string
+        email:
+          type: string
+    Codes:
+      type: object
+      properties:
+        icao:
+          type: string
+        sirena:
+          type: string
+        iata:
+          type: string
+    Transport_subtype:
+      type: object
+      properties:
+        color:
+          type: string
+        code:
+          type: string
+        title:
+          type: string
+    
+

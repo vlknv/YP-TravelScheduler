@@ -17,6 +17,7 @@
 		7807322C2B94EB8A008A184D /* openapi.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 7807322B2B94EB8A008A184D /* openapi.yaml */; };
 		7807322E2B94EBE0008A184D /* openapi-generator-config.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 7807322D2B94EBE0008A184D /* openapi-generator-config.yaml */; };
 		780732352B94EF43008A184D /* NearestStationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780732342B94EF43008A184D /* NearestStationsService.swift */; };
+		785BF5B72B9B7A310005BD84 /* ScheduleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785BF5B62B9B7A310005BD84 /* ScheduleService.swift */; };
 		D07701DEB248686B5745132C /* Pods_YP_TravelScheduler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA11CDCC97748143EA42B29 /* Pods_YP_TravelScheduler.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		7807322B2B94EB8A008A184D /* openapi.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = openapi.yaml; sourceTree = "<group>"; };
 		7807322D2B94EBE0008A184D /* openapi-generator-config.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "openapi-generator-config.yaml"; sourceTree = "<group>"; };
 		780732342B94EF43008A184D /* NearestStationsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearestStationsService.swift; sourceTree = "<group>"; };
+		785BF5B62B9B7A310005BD84 /* ScheduleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleService.swift; sourceTree = "<group>"; };
 		9C37A5BDDD68F64FD04D07BE /* Pods-YP-TravelScheduler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YP-TravelScheduler.release.xcconfig"; path = "Target Support Files/Pods-YP-TravelScheduler/Pods-YP-TravelScheduler.release.xcconfig"; sourceTree = "<group>"; };
 		AEA11CDCC97748143EA42B29 /* Pods_YP_TravelScheduler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YP_TravelScheduler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -83,6 +85,7 @@
 		7807322A2B94EB55008A184D /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				785BF5B62B9B7A310005BD84 /* ScheduleService.swift */,
 				780732342B94EF43008A184D /* NearestStationsService.swift */,
 				780732332B94EE88008A184D /* OpenAPI */,
 			);
@@ -264,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7807320B2B9374BB008A184D /* ContentView.swift in Sources */,
+				785BF5B72B9B7A310005BD84 /* ScheduleService.swift in Sources */,
 				780732352B94EF43008A184D /* NearestStationsService.swift in Sources */,
 				780732092B9374BB008A184D /* YPTravelSchedulerApp.swift in Sources */,
 			);
