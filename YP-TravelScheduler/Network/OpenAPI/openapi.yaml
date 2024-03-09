@@ -366,6 +366,59 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/NearestSettlement'
+  /v3.0/carrier/:
+    get:
+      tags:
+      - getCarriersInfo
+      summary: Информация о перевозчике
+      operationId: getCarriersInfo
+      parameters:
+      - name: apikey
+        in: query
+        description: API key
+        required: true
+        schema:
+          type: string
+      - name: code
+        in: query
+        description: код перевозчика
+        required: true
+        schema:
+          type: string
+      - name: system
+        in: query
+        description: система
+        required: false
+        schema:
+          type: string
+          enum:
+            - yandex
+            - iata
+            - sirena
+            - express
+            - esr
+      - name: lang
+        in: query
+        description: lang
+        required: false
+        schema:
+          type: string
+      - name: format
+        in: query
+        description: формат ответа
+        required: false
+        schema:
+          type: string
+          enum:
+            - json
+            - xml
+      responses:
+        "200":
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Carriers'
 components:
   schemas:
     NearestStations:
@@ -814,4 +867,11 @@ components:
           enum:
             - station
             - settlement
+    Carriers:
+      type: object
+      properties:
+        carriers:
+          type: array
+          items:
+            $ref: '#/components/schemas/Carrier'
 
