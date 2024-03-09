@@ -248,6 +248,71 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/StationSchedule'
+  /v3.0/thread/:
+    get:
+      tags:
+      - getDestinationStations
+      summary: Список станций следования
+      operationId: getDestinationStations
+      parameters:
+      - name: apikey
+        in: query
+        description: API key
+        required: true
+        schema:
+          type: string
+      - name: uid
+        in: query
+        description: Идентификатор нитки
+        required: true
+        schema:
+          type: string
+      - name: form
+        in: query
+        description: Код станции отправления
+        required: false
+        schema:
+          type: string
+      - name: to
+        in: query
+        description: Код станции прибытия
+        required: false
+        schema:
+          type: string
+      - name: format
+        in: query
+        description: Формат ответа
+        required: false
+        schema:
+          type: string
+          enum: [json, xml]
+      - name: lang
+        in: query
+        description: Язык ответа
+        required: false
+        schema:
+          type: string
+      - name: date
+        in: query
+        description: Дата
+        required: false
+        schema:
+          type: string
+          format: date
+      - name: show_systems
+        in: query
+        description: Системак кодирования
+        required: false
+        schema:
+          type: string
+          enum: [yandex, esr, all]
+      responses:
+        "200":
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DestinationStations'
 components:
   schemas:
     NearestStations:
@@ -605,5 +670,72 @@ components:
           type: string
         title:
           type: string
-    
-
+    DestinationStations:
+      type: object
+      properties:
+        except_days:
+          type: string
+        arrival_date:
+          type: string
+        from:
+          type: string
+        uid:
+          type: string
+        title:
+          type: string
+        interval:
+          $ref: '#/components/schemas/Interval'
+        departure_date:
+          type: string
+        start_time:
+          type: string
+        number:
+          type: string
+        short_title:
+          type: string
+        days:
+          type: string
+        to:
+          type: string
+        carrier:
+          $ref: '#/components/schemas/Carrier'
+        transport_type:
+          type: string
+          enum:
+            - plane
+            - train
+            - suburban
+            - bus
+            - water
+            - helicopter
+        stops:
+          type: array
+          items:
+            $ref: '#/components/schemas/Stop'
+        vehicle:
+          type: string
+        start_date:
+          type: string
+        transport_subtype:
+          $ref: '#/components/schemas/Transport_subtype'
+        express_type:
+          type: string
+    Stop:
+      type: object
+      properties:
+        arrival:
+          type: string
+          format: date
+        departure:
+          type: string
+          format: date
+        duration:
+          type: integer
+        stop_time:
+          type: integer
+        station:
+          $ref: '#/components/schemas/Station'
+        terminal:
+          type: string
+        platform:
+          type: string
