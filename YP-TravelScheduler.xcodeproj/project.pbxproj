@@ -75,24 +75,20 @@
 			isa = PBXGroup;
 			children = (
 				780732082B9374BB008A184D /* YPTravelSchedulerApp.swift */,
-				7807320A2B9374BB008A184D /* ContentView.swift */,
-				7807321B2B94E65B008A184D /* Localizable.xcstrings */,
-				780732192B94E5BA008A184D /* Colors.xcassets */,
-				7807320C2B9374BD008A184D /* Assets.xcassets */,
-				7807322A2B94EB55008A184D /* Network */,
+				783382EE2B9DDC4400219DDA /* Localization */,
+				783382ED2B9DDC3500219DDA /* Resourses */,
+				7807322A2B94EB55008A184D /* Services */,
+				783382F22B9DDCAF00219DDA /* UI */,
 			);
 			path = "YP-TravelScheduler";
 			sourceTree = "<group>";
 		};
-		7807322A2B94EB55008A184D /* Network */ = {
+		7807322A2B94EB55008A184D /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				78EFBF172B9CD68000625539 /* Items */,
-				780732332B94EE88008A184D /* OpenAPI */,
-				78EFBF1B2B9CD6ED00625539 /* ScheduleRequestServiceProtocol.swift */,
-				78EFBF192B9CD6BC00625539 /* ScheduleRequestService.swift */,
+				783382F12B9DDC6D00219DDA /* Networking */,
 			);
-			path = Network;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		780732332B94EE88008A184D /* OpenAPI */ = {
@@ -102,6 +98,50 @@
 				7807322D2B94EBE0008A184D /* openapi-generator-config.yaml */,
 			);
 			path = OpenAPI;
+			sourceTree = "<group>";
+		};
+		783382ED2B9DDC3500219DDA /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				780732192B94E5BA008A184D /* Colors.xcassets */,
+				7807320C2B9374BD008A184D /* Assets.xcassets */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		783382EE2B9DDC4400219DDA /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				7807321B2B94E65B008A184D /* Localizable.xcstrings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		783382F02B9DDC5000219DDA /* SheduleRequest */ = {
+			isa = PBXGroup;
+			children = (
+				78EFBF172B9CD68000625539 /* Items */,
+				780732332B94EE88008A184D /* OpenAPI */,
+				78EFBF1B2B9CD6ED00625539 /* ScheduleRequestServiceProtocol.swift */,
+				78EFBF192B9CD6BC00625539 /* ScheduleRequestService.swift */,
+			);
+			path = SheduleRequest;
+			sourceTree = "<group>";
+		};
+		783382F12B9DDC6D00219DDA /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				783382F02B9DDC5000219DDA /* SheduleRequest */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		783382F22B9DDCAF00219DDA /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7807320A2B9374BB008A184D /* ContentView.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		78EFBF172B9CD68000625539 /* Items */ = {
