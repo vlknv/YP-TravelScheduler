@@ -16,14 +16,9 @@
 		780732272B94E952008A184D /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = 780732262B94E952008A184D /* OpenAPIURLSession */; };
 		7807322C2B94EB8A008A184D /* openapi.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 7807322B2B94EB8A008A184D /* openapi.yaml */; };
 		7807322E2B94EBE0008A184D /* openapi-generator-config.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 7807322D2B94EBE0008A184D /* openapi-generator-config.yaml */; };
-		780732352B94EF43008A184D /* NearestStationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780732342B94EF43008A184D /* NearestStationsService.swift */; };
-		785BF5B72B9B7A310005BD84 /* ScheduleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785BF5B62B9B7A310005BD84 /* ScheduleService.swift */; };
-		785BF5C02B9C55E00005BD84 /* StationScheduleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785BF5BF2B9C55E00005BD84 /* StationScheduleService.swift */; };
-		785BF5C32B9C61650005BD84 /* DestinationStationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785BF5C22B9C61650005BD84 /* DestinationStationsService.swift */; };
-		785BF5C62B9C69CC0005BD84 /* NearestSettlementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785BF5C52B9C69CC0005BD84 /* NearestSettlementService.swift */; };
-		785BF5C92B9C6D810005BD84 /* CarriersInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785BF5C82B9C6D810005BD84 /* CarriersInfoService.swift */; };
-		785BF5CC2B9C74F90005BD84 /* GetCopyrightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785BF5CB2B9C74F90005BD84 /* GetCopyrightService.swift */; };
-		785BF5D32B9C8B830005BD84 /* AllAvailableStationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785BF5D22B9C8B830005BD84 /* AllAvailableStationsService.swift */; };
+		78EFBF152B9CD67A00625539 /* ResponseTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EFBF142B9CD67A00625539 /* ResponseTypes.swift */; };
+		78EFBF1A2B9CD6BC00625539 /* ScheduleRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EFBF192B9CD6BC00625539 /* ScheduleRequestService.swift */; };
+		78EFBF1C2B9CD6ED00625539 /* ScheduleRequestServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EFBF1B2B9CD6ED00625539 /* ScheduleRequestServiceProtocol.swift */; };
 		D07701DEB248686B5745132C /* Pods_YP_TravelScheduler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA11CDCC97748143EA42B29 /* Pods_YP_TravelScheduler.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,14 +32,9 @@
 		7807321B2B94E65B008A184D /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		7807322B2B94EB8A008A184D /* openapi.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = openapi.yaml; sourceTree = "<group>"; };
 		7807322D2B94EBE0008A184D /* openapi-generator-config.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "openapi-generator-config.yaml"; sourceTree = "<group>"; };
-		780732342B94EF43008A184D /* NearestStationsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearestStationsService.swift; sourceTree = "<group>"; };
-		785BF5B62B9B7A310005BD84 /* ScheduleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleService.swift; sourceTree = "<group>"; };
-		785BF5BF2B9C55E00005BD84 /* StationScheduleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationScheduleService.swift; sourceTree = "<group>"; };
-		785BF5C22B9C61650005BD84 /* DestinationStationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationStationsService.swift; sourceTree = "<group>"; };
-		785BF5C52B9C69CC0005BD84 /* NearestSettlementService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestSettlementService.swift; sourceTree = "<group>"; };
-		785BF5C82B9C6D810005BD84 /* CarriersInfoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarriersInfoService.swift; sourceTree = "<group>"; };
-		785BF5CB2B9C74F90005BD84 /* GetCopyrightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCopyrightService.swift; sourceTree = "<group>"; };
-		785BF5D22B9C8B830005BD84 /* AllAvailableStationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAvailableStationsService.swift; sourceTree = "<group>"; };
+		78EFBF142B9CD67A00625539 /* ResponseTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseTypes.swift; sourceTree = "<group>"; };
+		78EFBF192B9CD6BC00625539 /* ScheduleRequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleRequestService.swift; sourceTree = "<group>"; };
+		78EFBF1B2B9CD6ED00625539 /* ScheduleRequestServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleRequestServiceProtocol.swift; sourceTree = "<group>"; };
 		9C37A5BDDD68F64FD04D07BE /* Pods-YP-TravelScheduler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YP-TravelScheduler.release.xcconfig"; path = "Target Support Files/Pods-YP-TravelScheduler/Pods-YP-TravelScheduler.release.xcconfig"; sourceTree = "<group>"; };
 		AEA11CDCC97748143EA42B29 /* Pods_YP_TravelScheduler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YP_TravelScheduler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -97,15 +87,10 @@
 		7807322A2B94EB55008A184D /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				785BF5D22B9C8B830005BD84 /* AllAvailableStationsService.swift */,
-				785BF5CB2B9C74F90005BD84 /* GetCopyrightService.swift */,
-				785BF5C82B9C6D810005BD84 /* CarriersInfoService.swift */,
-				785BF5C52B9C69CC0005BD84 /* NearestSettlementService.swift */,
-				785BF5C22B9C61650005BD84 /* DestinationStationsService.swift */,
-				785BF5BF2B9C55E00005BD84 /* StationScheduleService.swift */,
-				785BF5B62B9B7A310005BD84 /* ScheduleService.swift */,
-				780732342B94EF43008A184D /* NearestStationsService.swift */,
+				78EFBF172B9CD68000625539 /* Items */,
 				780732332B94EE88008A184D /* OpenAPI */,
+				78EFBF1B2B9CD6ED00625539 /* ScheduleRequestServiceProtocol.swift */,
+				78EFBF192B9CD6BC00625539 /* ScheduleRequestService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -117,6 +102,14 @@
 				7807322D2B94EBE0008A184D /* openapi-generator-config.yaml */,
 			);
 			path = OpenAPI;
+			sourceTree = "<group>";
+		};
+		78EFBF172B9CD68000625539 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				78EFBF142B9CD67A00625539 /* ResponseTypes.swift */,
+			);
+			path = Items;
 			sourceTree = "<group>";
 		};
 		A9318A1268BA3BE0EDA7C364 /* Frameworks */ = {
@@ -284,15 +277,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				785BF5D32B9C8B830005BD84 /* AllAvailableStationsService.swift in Sources */,
-				785BF5CC2B9C74F90005BD84 /* GetCopyrightService.swift in Sources */,
-				785BF5C62B9C69CC0005BD84 /* NearestSettlementService.swift in Sources */,
 				7807320B2B9374BB008A184D /* ContentView.swift in Sources */,
-				785BF5B72B9B7A310005BD84 /* ScheduleService.swift in Sources */,
-				780732352B94EF43008A184D /* NearestStationsService.swift in Sources */,
-				785BF5C92B9C6D810005BD84 /* CarriersInfoService.swift in Sources */,
-				785BF5C02B9C55E00005BD84 /* StationScheduleService.swift in Sources */,
-				785BF5C32B9C61650005BD84 /* DestinationStationsService.swift in Sources */,
+				78EFBF152B9CD67A00625539 /* ResponseTypes.swift in Sources */,
+				78EFBF1C2B9CD6ED00625539 /* ScheduleRequestServiceProtocol.swift in Sources */,
+				78EFBF1A2B9CD6BC00625539 /* ScheduleRequestService.swift in Sources */,
 				780732092B9374BB008A184D /* YPTravelSchedulerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
