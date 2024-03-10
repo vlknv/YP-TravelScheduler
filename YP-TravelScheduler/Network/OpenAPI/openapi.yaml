@@ -5,9 +5,6 @@ info:
   version: 3.0.0
 servers:
 - url: https://api.rasp.yandex.net
-tags:
-- name: Список ближайших станций
-  description: Список ближайших станций
 paths:
   /v3.0/nearest_stations/:
     get:
@@ -40,12 +37,24 @@ paths:
         required: true
         schema:
           type: integer
+      - name: offset
+        in: query
+        description: смещение
+        required: false
+        schema:
+          type: integer
+      - name: limit
+        in: query
+        description: лимит
+        required: false
+        schema:
+          type: integer
       - name: format
         in: query
         description: json или xml
         required: false
         schema:
-          type: string
+          $ref: '#/components/schemas/Format'
       - name: lang
         in: query
         description: lang
@@ -89,8 +98,7 @@ paths:
         description: Формат ответа
         required: false
         schema:
-          type: string
-          enum: [json, xml]
+          $ref: '#/components/schemas/Format'
       - name: lang
         in: query
         description: Язык ответа
@@ -109,22 +117,19 @@ paths:
         description: Тип транспорта
         required: false
         schema:
-          type: string
-          enum: [plane, train, suburban, bus, water, helicopter]
+          $ref: '#/components/schemas/TransportTypes'
       - name: system
         in: query
         description: Системак кодирования
         required: false
         schema:
-          type: string
-          enum: [yandex, iata, sirena, express, esr]
+          $ref: '#/components/schemas/System'
       - name: show_systems
         in: query
         description: Системак кодирования
         required: false
         schema:
-          type: string
-          enum: [yandex, esr]
+          $ref: '#/components/schemas/System'
       - name: offset
         in: query
         description: Смещение
@@ -192,8 +197,7 @@ paths:
         description: Формат ответа
         required: false
         schema:
-          type: string
-          enum: [json, xml]
+          $ref: '#/components/schemas/Format'
       - name: date
         in: query
         description: Дата
@@ -206,8 +210,7 @@ paths:
         description: Тип транспорта
         required: false
         schema:
-          type: string
-          enum: [plane, train, suburban, bus, water, helicopter]
+          $ref: '#/components/schemas/TransportTypes'
       - name: direction
         in: query
         description: Код направления
@@ -220,21 +223,21 @@ paths:
         required: false
         schema:
           type: string
-          enum: [departure, arrival]
+          enum:
+            - departure
+            - arrival
       - name: system
         in: query
         description: Системак кодирования
         required: false
         schema:
-          type: string
-          enum: [yandex, iata, sirena, express, esr]
+          $ref: '#/components/schemas/System'
       - name: show_systems
         in: query
         description: Системак кодирования
         required: false
         schema:
-          type: string
-          enum: [yandex, esr, all]
+          $ref: '#/components/schemas/System'
       - name: result_timezone
         in: query
         description: Часовой пояс
@@ -284,8 +287,7 @@ paths:
         description: Формат ответа
         required: false
         schema:
-          type: string
-          enum: [json, xml]
+          $ref: '#/components/schemas/Format'
       - name: lang
         in: query
         description: Язык ответа
@@ -304,8 +306,7 @@ paths:
         description: Системак кодирования
         required: false
         schema:
-          type: string
-          enum: [yandex, esr, all]
+          $ref: '#/components/schemas/System'
       responses:
         "200":
           description: success
@@ -352,13 +353,10 @@ paths:
           type: string
       - name: format
         in: query
-        description: json или xml
+        description: формат ответа
         required: false
         schema:
-          type: string
-          enum:
-            - json
-            - xml
+          $ref: '#/components/schemas/Format'
       responses:
         "200":
           description: success
@@ -390,13 +388,7 @@ paths:
         description: система
         required: false
         schema:
-          type: string
-          enum:
-            - yandex
-            - iata
-            - sirena
-            - express
-            - esr
+          $ref: '#/components/schemas/System'
       - name: lang
         in: query
         description: lang
@@ -408,10 +400,7 @@ paths:
         description: формат ответа
         required: false
         schema:
-          type: string
-          enum:
-            - json
-            - xml
+          $ref: '#/components/schemas/Format'
       responses:
         "200":
           description: success
@@ -443,10 +432,7 @@ paths:
         description: формат ответа
         required: false
         schema:
-          type: string
-          enum:
-            - json
-            - xml
+          $ref: '#/components/schemas/Format'
       responses:
         "200":
           description: success
@@ -474,10 +460,7 @@ paths:
         description: формат ответа
         required: false
         schema:
-          type: string
-          enum:
-            - json
-            - xml
+          $ref: '#/components/schemas/Format'
       responses:
         "200":
           description: success
@@ -495,7 +478,7 @@ components:
         stations:
           type: array
           items:
-            $ref: '#/components/schemas/Station_Item'
+            $ref: '#/components/schemas/StationItem'
     Pagination:
       type: object
       properties:
@@ -505,11 +488,11 @@ components:
           type: integer
         offset:
           type: integer
-    Station_Item:
+    StationItem:
       type: object
       properties:
         type:
-          type: string
+          $ref: '#/components/schemas/SearchStationType'
         title:
           type: string
         short_title:
@@ -523,11 +506,11 @@ components:
         lng:
           type: number
         station_type:
-          type: string
+          $ref: '#/components/schemas/StationTypes'
         station_type_name:
           type: string
         transport_type:
-          type: string
+          $ref: '#/components/schemas/TransportTypes'
         distance:
           type: number
         majority:
@@ -549,14 +532,14 @@ components:
         interval_segments:
           type: array
           items:
-            $ref: '#/components/schemas/Interval_segment'
+            $ref: '#/components/schemas/IntervalSegment'
         segments:
           type: array
           items:
             $ref: '#/components/schemas/Segment'
         search:
           $ref: '#/components/schemas/Search'
-    Interval_segment:
+    IntervalSegment:
       type: object
       properties:
         from:
@@ -574,7 +557,7 @@ components:
         has_transfers:
           type: boolean
         tickets_info:
-          $ref: '#/components/schemas/Tickets_info'
+          $ref: '#/components/schemas/TicketsInfo'
         duration:
           type: integer
         arrival_terminal:
@@ -588,6 +571,7 @@ components:
       properties:
         arrival:
           type: string
+          format: date
         from:
           $ref: '#/components/schemas/From'
         thread:
@@ -596,6 +580,7 @@ components:
           type: string
         departure:
           type: string
+          format: date
         stops:
           type: string
         departure_terminal:
@@ -605,7 +590,7 @@ components:
         has_transfers:
           type: boolean
         tickets_info:
-          $ref: '#/components/schemas/Tickets_info'
+          $ref: '#/components/schemas/TicketsInfo'
         duration:
           type: integer
         arrival_terminal:
@@ -619,10 +604,24 @@ components:
       properties:
         date:
           type: string
+          format: date
         to:
-          $ref: '#/components/schemas/To'
+          $ref: '#/components/schemas/SearchFromTo'
         from:
-          $ref: '#/components/schemas/From'
+          $ref: '#/components/schemas/SearchFromTo'
+    SearchFromTo:
+      type: object
+      properties:
+        code:
+          type: string
+        type:
+          $ref: '#/components/schemas/SearchStationType'
+        popular_title:
+          type: string
+        short_title:
+          type: string
+        title:
+          type: string
     From:
       type: object
       properties:
@@ -631,7 +630,7 @@ components:
         title:
           type: string
         station_type:
-          type: string
+          $ref: '#/components/schemas/StationTypes'
         station_type_name:
           type: string
         popular_title:
@@ -639,9 +638,9 @@ components:
         short_title:
           type: string
         transport_type:
-          type: string
+          $ref: '#/components/schemas/TransportTypes'
         type:
-          type: string
+          $ref: '#/components/schemas/SearchStationType'
     Thread:
       type: object
       properties:
@@ -660,13 +659,13 @@ components:
         carrier:
           $ref: '#/components/schemas/Carrier'
         transport_type:
-          type: string
+          $ref: '#/components/schemas/TransportTypes'
         vehicle:
           type: string
         transport_subtype:
-          $ref: '#/components/schemas/Transport_subtype'
+          $ref: '#/components/schemas/TransportSubtype'
         express_type:
-          type: string
+          $ref: '#/components/schemas/ExpressType'
     To:
       type: object
       properties:
@@ -675,7 +674,7 @@ components:
         title:
           type: string
         station_type:
-          type: string
+          $ref: '#/components/schemas/StationTypes'
         station_type_name:
           type: string
         popular_title:
@@ -683,10 +682,10 @@ components:
         short_title:
           type: string
         transport_type:
-          type: string
+          $ref: '#/components/schemas/TransportTypes'
         type:
-          type: string
-    Tickets_info:
+          $ref: '#/components/schemas/SearchStationType'
+    TicketsInfo:
       type: object
       properties:
         et_marker:
@@ -718,8 +717,10 @@ components:
           type: string
         end_time:
           type: string
+          format: date
         begin_time:
           type: string
+          format: date
     Carrier:
       type: object
       properties:
@@ -743,13 +744,13 @@ components:
           type: string
         email:
           type: string
-    Transport_subtype:
+    TransportSubtype:
       type: object
       properties:
         color:
           type: string
         code:
-          type: string
+          $ref: '#/components/schemas/TransportSubtypeCode'
         title:
           type: string
     StationSchedule:
@@ -765,9 +766,9 @@ components:
         schedule:
           type: array
           items:
-            $ref: '#/components/schemas/Schedule_Item'
+            $ref: '#/components/schemas/Schedule_item'
         schedule_direction:
-          $ref: '#/components/schemas/Schedule_direction'
+          $ref: '#/components/schemas/ScheduleDirection'
         directions:
           $ref: '#/components/schemas/Directions'
     Station:
@@ -776,8 +777,7 @@ components:
         code:
           type: string
         station_type:
-          type: string
-          enum: [station, platform, stop, checkpoint, post, crossing, overtaking_point, train_station, airport, bus_station, bus_stop, unknown, port, port_point, wharf, river_port, marine_station]
+          $ref: '#/components/schemas/StationTypes'
         station_type_name:
           type: string
         title:
@@ -789,8 +789,7 @@ components:
         codes:
           $ref: '#/components/schemas/Codes'
         transport_type:
-          type: string
-          enum: [plane, train, suburban, bus, water, helicopter]
+          $ref: '#/components/schemas/TransportTypes'
         type:
           type: string
     Codes:
@@ -806,7 +805,7 @@ components:
           type: string
         esr:
           type: string
-    Schedule_Item:
+    Schedule_item:
       type: object
       properties:
         except_days:
@@ -828,7 +827,7 @@ components:
           type: string
         platform:
           type: string
-    Schedule_direction:
+    ScheduleDirection:
       type: object
       properties:
         code:
@@ -872,14 +871,7 @@ components:
         carrier:
           $ref: '#/components/schemas/Carrier'
         transport_type:
-          type: string
-          enum:
-            - plane
-            - train
-            - suburban
-            - bus
-            - water
-            - helicopter
+          $ref: '#/components/schemas/TransportTypes'
         stops:
           type: array
           items:
@@ -889,9 +881,9 @@ components:
         start_date:
           type: string
         transport_subtype:
-          $ref: '#/components/schemas/Transport_subtype'
+          $ref: '#/components/schemas/TransportSubtype'
         express_type:
-          type: string
+          $ref: '#/components/schemas/ExpressType'
     Stop:
       type: object
       properties:
@@ -929,10 +921,7 @@ components:
         lng:
           type: number
         type:
-          type: string
-          enum:
-            - station
-            - settlement
+          $ref: '#/components/schemas/SearchStationType'
     Carriers:
       type: object
       properties:
@@ -988,34 +977,9 @@ components:
         codes:
           $ref: '#/components/schemas/StationCode'
         station_type:
-          type: string
-          enum:
-            - station
-            - platform
-            - stop
-            - checkpoint
-            - post
-            - crossing
-            - overtaking_point
-            - train_station
-            - airport
-            - bus_station
-            - bus_stop
-            - unknown
-            - port
-            - port_point
-            - wharf
-            - river_port
-            - marine_station
+          $ref: '#/components/schemas/StationTypes'
         transport_type:
-          type: string
-          enum:
-            - plane
-            - train
-            - suburban
-            - bus
-            - water
-            - helicopter
+          $ref: '#/components/schemas/TransportTypes'
         longitude:
           type: number
         latitude:
@@ -1038,8 +1002,8 @@ components:
       type: object
       properties:
         copyright:
-          $ref: '#/components/schemas/Copyright_Item'
-    Copyright_Item:
+          $ref: '#/components/schemas/CopyrightItem'
+    CopyrightItem:
         type: object
         properties:
           logo_vm:
@@ -1058,3 +1022,81 @@ components:
             type: string
           logo_hm:
             type: string
+    TransportTypes:
+      type: string
+      enum:
+        - plane
+        - train
+        - suburban
+        - bus
+        - water
+        - helicopter
+    StationTypes:
+      type: string
+      enum:
+        - station
+        - platform
+        - stop
+        - checkpoint
+        - post
+        - crossing
+        - overtaking_point
+        - train_station
+        - airport
+        - bus_station
+        - bus_stop
+        - unknown
+        - port
+        - port_point
+        - wharf
+        - river_port
+        - marine_station
+        - ""
+    Format:
+      type: string
+      enum:
+        - json
+        - xml
+    SearchStationType:
+      type: string
+      enum:
+        - station
+        - settlement
+    TransportSubtypeCode:
+      type: string
+      enum:
+        - helicopter
+        - rex
+        - sputnik
+        - skiarrow
+        - shezh
+        - skirus
+        - city
+        - kalina
+        - vostok
+        - prostoryaltaya
+        - 14vag
+        - last
+        - exprdal
+        - volzhex
+        - stdplus
+        - express
+        - skor
+        - fiztekh
+        - vag6
+        - river
+        - sea
+    ExpressType:
+      type: string
+      enum:
+        - express
+        - aeroexpress
+    System:
+      type: string
+      enum:
+        - yandex
+        - iata
+        - sirena
+        - express
+        - esr
+        - all
