@@ -203,8 +203,8 @@
 			files = (
 				7807320D2B9374BD008A184D /* Assets.xcassets in Resources */,
 				7807322C2B94EB8A008A184D /* openapi.yaml in Resources */,
-				7807321A2B94E5BA008A184D /* Colors.xcassets in Resources */,
 				7807322E2B94EBE0008A184D /* openapi-generator-config.yaml in Resources */,
+				7807321A2B94E5BA008A184D /* Colors.xcassets in Resources */,
 				7807321C2B94E65B008A184D /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
