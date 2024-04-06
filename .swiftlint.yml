@@ -151,5 +151,8 @@ type_name:
   excluded: 
     - ID
     - Ad
+    
+file_name:
+  excluded: ["ResponseTypes.swift"]
 
 large_tuple: 4
