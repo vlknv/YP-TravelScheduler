@@ -11,7 +11,7 @@ import SwiftUI
 
 struct RoutesFilterView {
     @Environment(\.dismiss)
-    var dismiss
+    private var dismiss
     
     private let formatter = DateComponentsFormatter.hoursAndMinutes
     

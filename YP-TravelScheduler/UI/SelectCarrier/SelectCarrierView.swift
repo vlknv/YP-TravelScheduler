@@ -8,14 +8,11 @@
 import SwiftUI
 
 struct SelectCarrierView: View {
-    private let calendar = Calendar.autoupdatingCurrent
-        
+    private let route: Route = .mockRoute
+
     @State private var selectedRouteIntervals: Set<RouteInterval> = []
     @State private var transferVariant: TransferVariant?
-
-    private let route: Route = .mockRoute
-    
-    @State var filteredVariants: [Route.Variant] = Route.mockRoute.variants
+    @State private var filteredVariants: [Route.Variant] = []
     
     var body: some View {
         VStack {

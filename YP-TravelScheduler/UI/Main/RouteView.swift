@@ -54,8 +54,12 @@ struct RouteView: View {
     
     private var switchButton: some View {
         Button(
-            action: { (fromStationId, toStationId) = (toStationId, fromStationId) },
-            label: { Image(.switch) }
+            action: {
+                (fromStationId, toStationId) = (toStationId, fromStationId)
+            },
+            label: {
+                Image(.switch)
+            }
         )
         .foregroundStyle(.accent)
         .frame(width: 24, height: 24)

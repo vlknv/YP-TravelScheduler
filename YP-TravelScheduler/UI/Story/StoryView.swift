@@ -9,9 +9,9 @@ import SwiftUI
 
 struct StoryView {
     @Environment(\.dismiss)
-    var dismiss
+    private var dismiss
     
-    @EnvironmentObject var viewModel: StoryViewModel
+    @EnvironmentObject private var viewModel: StoryViewModel
     
     private let storyToStartFrom: Story
     

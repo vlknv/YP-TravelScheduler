@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct StoriesBlockView: View {
-    @EnvironmentObject var storiesViewModel: StoryViewModel
+    @EnvironmentObject private var storiesViewModel: StoryViewModel
     
     @State private var storyToOpen: Story?
     
@@ -33,7 +33,6 @@ struct StoriesBlockView: View {
                 Image(image)
                     .resizable()
                     .scaledToFit()
-                    
                     .clipShape(.rect(cornerRadius: 16))
                     .opacity(story.isRead ? 0.5 : 1)
                     .onTapGesture {
@@ -60,7 +59,7 @@ struct StoriesBlockView: View {
 
 #Preview {
     final class PreviewViewModel: StoryViewModelProtocol {
-        let  storyToShow: Story? = nil
+        let storyToShow: Story? = nil
         let progressViewModels: [ProgressViewModel] = []
         
         func onAppear(startStory: Story) { }

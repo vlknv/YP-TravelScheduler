@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct SearchFieldView<Item>: View where Item: Named {
+    @State private var text: String = ""
+
     let items: [Item]
     @Binding var filteredItems: [Item]
-    @State var text: String = ""
         
     var body: some View {
         HStack {

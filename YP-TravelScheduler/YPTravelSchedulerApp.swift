@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct YPTravelSchedulerApp: App {
-    @State var darkMode = false
+    @State private var darkMode = false
     
     var body: some Scene {
         WindowGroup {

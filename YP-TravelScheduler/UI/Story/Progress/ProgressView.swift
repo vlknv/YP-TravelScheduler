@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProgressView<ViewModel: ProgressViewModelProtocol> {
-    @ObservedObject var viewModel: ViewModel
+    @ObservedObject private var viewModel: ViewModel
     
     @State private var isAnimating = false
     
