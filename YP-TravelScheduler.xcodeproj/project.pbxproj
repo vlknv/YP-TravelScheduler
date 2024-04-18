@@ -426,7 +426,6 @@
 				7807321D2B94E8FA008A184D /* XCRemoteSwiftPackageReference "swift-openapi-generator" */,
 				780732222B94E91C008A184D /* XCRemoteSwiftPackageReference "swift-openapi-runtime" */,
 				780732252B94E952008A184D /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */,
-				788D78A62BD146F600060A78 /* XCRemoteSwiftPackageReference "SwiftLint" */,
 			);
 			productRefGroup = 780732062B9374BB008A184D /* Products */;
 			projectDirPath = "";
@@ -785,14 +784,6 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.0.1;
-			};
-		};
-		788D78A62BD146F600060A78 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/SwiftLint.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.54.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
