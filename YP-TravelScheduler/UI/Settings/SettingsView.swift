@@ -6,70 +6,87 @@
 //
 
 import SwiftUI
-import WebKit
 
 struct SettingsView: View {
     @Binding var darkMode: Bool
+    @Binding var error: NetworkError?
     
     var body: some View {
-        VStack(spacing: 0) {
-            Toggle(isOn: $darkMode) {
-                Text("Тёмная тема")
-            }
-            .font(.system(size: 17))
-            .tint(.accent)
-            .frame(height: 60)
-            
-            NavigationLink(
-                destination: WebView()
-                    .background(.c6White)
-                    .navigationTitle("Пользовательское соглашение")
-            ) {
-                HStack {
-                    Text("Пользовательское соглашение")
-                        .font(.system(size: 17))
-                        .padding(.vertical, 19)
-                    
-                    Spacer()
-                    
-                    Symbol.chevronForward.image
-                        .font(.system(size: 19))
-                }
-                .frame(height: 60)
-            }
-            
-            Spacer()
-            
-            Group {
-                Text("Приложение использует API «Яндекс.Расписания»")
+        NavigationStack {
+            VStack(spacing: 0) {
+                darkModeSwitch
                 
-                Text("Версия 1.0 (beta)")
+                userAgreement
+                
+                #if DEBUG
+                showError
+                #endif
+                
+                Spacer()
+                
+                footer
             }
-            .font(.system(size: 12))
+            .padding(.horizontal, 16)
+            .padding(.vertical, 24)
+            .background(.c6White)
+            .navigationDestination(for: SettingsDestination.self) { destination in
+                switch destination {
+                case .userAgreement:
+                    WebView()
+                        .background(.c6White)
+                        .navigationTitle("Пользовательское соглашение")
+                        .toolbar(.hidden, for: .tabBar)
+                }
+            }
         }
-        .padding(.horizontal, 16)
-        .padding(.vertical, 24)
-        .background(.c6White)
+    }
+    
+    private var darkModeSwitch: some View {
+        Toggle(isOn: $darkMode) {
+            Text("Тёмная тема")
+        }
+        .font(.system(size: 17))
+        .tint(.accent)
+        .frame(height: 60)
+    }
+    
+    private var userAgreement: some View {
+        NavigationLink(value: SettingsDestination.userAgreement) {
+            HStack {
+                Text("Пользовательское соглашение")
+                    .font(.system(size: 17))
+                    .padding(.vertical, 19)
+                
+                Spacer()
+                
+                Symbol.chevronForward.image
+                    .font(.system(size: 19))
+            }
+            .frame(height: 60)
+        }
+    }
+    
+    private var showError: some View {
+        Button("Показать ошибку") {
+            error = Bool.random() ? .serverUnavailable : .noInternet
+        }
+        .frame(height: 60)
+        .frame(maxWidth: .infinity, alignment: .leading)
+    }
+    
+    private var footer: some View {
+        Group {
+            Text("Приложение использует API «Яндекс.Расписания»")
+            
+            Text("Версия 1.0 (beta)")
+        }
+        .font(.system(size: 12))
     }
 }
 
 #Preview {
-    SettingsView(darkMode: .constant(false))
-}
-
-struct WebView: UIViewRepresentable {
-    let webView = WKWebView(frame: .zero)
-
-    func makeUIView(context: Context) -> WKWebView {
-        webView
-    }
-    
-    func updateUIView(
-        _ uiView: WKWebView,
-        context: Context
-    ) {
-        webView.load(
-            URLRequest(url: URL(string: "https://yandex.ru/legal/practicum_offer/")!)
-        )
-    }
+    SettingsView(
+        darkMode: .constant(false),
+        error: .constant(nil)
+    )
 }

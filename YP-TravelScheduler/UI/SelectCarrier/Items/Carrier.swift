@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Carrier: Identifiable {
+struct Carrier: Identifiable, Hashable {
     let id: UUID
     
     let briefTitle: String

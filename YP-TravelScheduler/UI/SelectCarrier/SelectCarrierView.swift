@@ -11,7 +11,7 @@ struct SelectCarrierView: View {
     private let route: Route = .mockRoute
 
     @State private var selectedRouteIntervals: Set<RouteInterval> = []
-    @State private var transferVariant: TransferVariant?
+    @State private var transferVariant: TransferVariant = .with
     @State private var filteredVariants: [Route.Variant] = []
     
     var body: some View {
@@ -25,7 +25,9 @@ struct SelectCarrierView: View {
                 ScrollView {
                     LazyVStack {
                         ForEach(filteredVariants) { schedule in
-                            NavigationLink(destination: CarrierInfoView(carrier: schedule.carrier)) {
+                            NavigationLink(
+                                value: MainDestination.carrierInfo(schedule.carrier)
+                            ) {
                                 ScheduleView(schedule: schedule)
                             }
                         }
@@ -44,23 +46,25 @@ struct SelectCarrierView: View {
         .frame(maxHeight: .infinity)
         .overlay(alignment: .bottom) {
             NavigationLink(
-                destination: RoutesFilterView(
-                    selectedRouteIntervals: $selectedRouteIntervals,
-                    transferVariant: $transferVariant
-                ),
-                label: {
-                    Text("Уточнить время")
-                        .font(.system(size: 17, weight: .bold))
-                        .frame(maxWidth: .infinity)
-                        .foregroundStyle(.white)
-                }
-            )
+                value: MainDestination.routesFilter(
+                    .init(
+                        selectedRouteIntervals: $selectedRouteIntervals,
+                        transferVariant: $transferVariant
+                    )
+                )
+            ) {
+                Text("Уточнить время")
+                    .font(.system(size: 17, weight: .bold))
+                    .frame(maxWidth: .infinity)
+                    .foregroundStyle(.white)
+            }
             .buttonStyle(.blueRoundedButton)
             .padding(.bottom, 8)
         }
         .padding(16)
         .background(.c6White)
-        .navigationTitle("")
+        .toolbarRole(.editor)
+        .toolbar(.hidden, for: .tabBar)
         .onAppear {
             filteredVariants = route.variants.filter(variantFilter)
         }
@@ -68,8 +72,7 @@ struct SelectCarrierView: View {
     
     private func variantFilter(_ variant: Route.Variant) -> Bool {
         let variantCondition = switch transferVariant {
-        case .none: true
-        case .with: variant.transferPoint != nil
+        case .with: true
         case .without: variant.transferPoint == nil
         }
         

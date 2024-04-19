@@ -12,6 +12,7 @@ enum Symbol: String {
     case magnifyingglass
     case xmarkCircleFill = "xmark.circle.fill"
     case arrowForward = "arrow.forward"
+    case xmark
 }
 
 extension Symbol {

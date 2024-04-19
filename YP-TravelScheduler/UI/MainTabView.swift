@@ -8,22 +8,27 @@
 import SwiftUI
 
 struct MainTabView: View {
+    @State private var error: NetworkError?
+
     @Binding var darkMode: Bool
     
     var body: some View {
-        NavigationView {
-            TabView {
-                MainView()
-                    .tabItem {
-                        Image(.message)
-                    }
-                
-                SettingsView(darkMode: $darkMode)
-                    .tabItem {
-                        Image(.gear)
-                    }
+        TabView {
+            MainView()
+                .tabItem {
+                    Image(.message)
+                }
+            
+            SettingsView(
+                darkMode: $darkMode,
+                error: $error
+            )
+            .tabItem {
+                Image(.gear)
             }
-            .navigationTitle("")
+        }
+        .fullScreenCover(item: $error) {
+            ErrorView(errorType: $0)
         }
     }
 }

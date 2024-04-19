@@ -33,6 +33,7 @@ struct CarrierInfoView: View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(.c6White)
         .navigationTitle("Информация о перевозчике")
+        .toolbarRole(.editor)
     }
     
     private func detailsView(_ contact: Contact) -> some View {

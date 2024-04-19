@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ErrorView: View {
+    @Environment(\.dismiss)
+    var dismiss
+    
     let errorType: NetworkError
     
     var body: some View {
@@ -21,7 +24,22 @@ struct ErrorView: View {
                 .font(.system(size: 24, weight: .bold))
                 .foregroundStyle(.c7Black)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(.c6White)
+        .overlay(alignment: .topLeading) {
+            // Кнопка пока что добавлена для тестирования,
+            // потому что иначе скрыть экран сейчас нельзя
+            Button(
+                action: {
+                    dismiss()
+                },
+                label: {
+                    Symbol.xmark.image
+                        .tint(.c7Black)
+                }
+            )
+            .padding(16)
+        }
     }
 }
 

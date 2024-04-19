@@ -16,14 +16,14 @@ struct RoutesFilterView {
     private let formatter = DateComponentsFormatter.hoursAndMinutes
     
     @State private var initialSelectedRouteIntervals: Set<RouteInterval>
-    @State private var initialTransferVariant: TransferVariant?
+    @State private var initialTransferVariant: TransferVariant
     
     @Binding var selectedRouteIntervals: Set<RouteInterval>
-    @Binding var transferVariant: TransferVariant?
+    @Binding var transferVariant: TransferVariant
     
     init(
         selectedRouteIntervals: Binding<Set<RouteInterval>>,
-        transferVariant: Binding<TransferVariant?>
+        transferVariant: Binding<TransferVariant>
     ) {
         self._selectedRouteIntervals = selectedRouteIntervals
         self._transferVariant = transferVariant
@@ -66,6 +66,7 @@ extension RoutesFilterView: View {
         .padding([.horizontal, .top], 16)
         .padding(.bottom, 24)
         .background(.c6White)
+        .toolbarRole(.editor)
     }
     
     private var timeFiltering: some View {
@@ -125,7 +126,7 @@ extension RoutesFilterView: View {
                 }
                 .contentShape(.rect)
                 .onTapGesture {
-                    initialTransferVariant = initialTransferVariant != variant ? variant : nil
+                    initialTransferVariant = variant
                 }
             }
         }
@@ -135,6 +136,6 @@ extension RoutesFilterView: View {
 #Preview {
     RoutesFilterView(
         selectedRouteIntervals: .constant([.day]),
-        transferVariant: .constant(nil)
+        transferVariant: .constant(.with)
     )
 }

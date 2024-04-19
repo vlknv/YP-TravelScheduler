@@ -11,3 +11,7 @@ enum NetworkError {
     case noInternet
     case serverUnavailable
 }
+
+extension NetworkError: Identifiable {
+    var id: Self { self }
+}

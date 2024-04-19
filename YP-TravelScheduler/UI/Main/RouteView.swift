@@ -1,5 +1,5 @@
 //
-//  DirectionsView.swift
+//  RouteView.swift
 //  YP-TravelScheduler
 //
 //  Created by Aleksandr Velikanov on 07.04.2024.
@@ -9,9 +9,6 @@ import SwiftUI
 
 struct RouteView: View {
     private let subject: Subject = .mockData
-
-    @State private var fromIsActive = false
-    @State private var toIsActive = false
     
     @Binding var fromStationId: UUID?
     @Binding var toStationId: UUID?
@@ -32,16 +29,12 @@ struct RouteView: View {
         VStack(alignment: .leading, spacing: 28) {
             navigationLink(
                 name: "Откуда",
-                subject: subject,
-                stationId: $fromStationId,
-                isActive: $fromIsActive
+                parameters: .init(selectedId: $fromStationId, subject: subject)
             )
             
             navigationLink(
                 name: "Куда",
-                subject: subject,
-                stationId: $toStationId,
-                isActive: $toIsActive
+                parameters: .init(selectedId: $toStationId, subject: subject)
             )
         }
         .lineLimit(1)
@@ -70,19 +63,10 @@ struct RouteView: View {
     
     private func navigationLink(
         name: String,
-        subject: Subject,
-        stationId: Binding<UUID?>,
-        isActive: Binding<Bool>
+        parameters: MainDestination.Route
     ) -> some View {
-        NavigationLink(
-            destination: SelectSubjectView(
-                subject: subject,
-                selectedSubjectId: stationId,
-                isActive: isActive
-            ),
-            isActive: isActive
-        ) {
-            if let id = stationId.wrappedValue {
+        NavigationLink(value: MainDestination.route(parameters)) {
+            if let id = parameters.selectedId.wrappedValue {
                 Text(subject.getRouteNameBy(id: id) ?? "")
                     .foregroundStyle(.c3BlackUniversal)
                     .frame(maxWidth: .infinity, alignment: .leading)

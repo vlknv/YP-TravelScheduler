@@ -12,17 +12,17 @@ struct SelectSubjectView {
     
     @State private var filteredItems: [Subject]
 
-    @Binding var selectedSubjectId: UUID?
-    @Binding var isActive: Bool
+    @Binding private var path: [MainDestination]
+    @Binding private var selectedSubjectId: UUID?
         
     init(
         subject: Subject,
-        selectedSubjectId: Binding<UUID?>,
-        isActive: Binding<Bool>
+        path: Binding<[MainDestination]>,
+        selectedSubjectId: Binding<UUID?>
     ) {
         self.subject = subject
+        self._path = path
         self._selectedSubjectId = selectedSubjectId
-        self._isActive = isActive
         
         _filteredItems = State(initialValue: subject.items)
     }
@@ -48,44 +48,40 @@ extension SelectSubjectView: View {
         }
         .padding(.horizontal, 16)
         .background(.c6White)
-        .toolbar {
-            ToolbarItem(placement: .principal) {
-                Text(subject.itemsType?.title ?? "")
-                    .font(.system(size: 17, weight: .bold))
-                    .foregroundStyle(.c7Black)
-            }
-        }
-        .navigationTitle("")
-        .onAppear {
-            if subject.items.isEmpty {
-                selectedSubjectId = subject.id
-                isActive = false
-            }
-        }
+        .toolbarRole(.editor)
+        .navigationTitle(subject.itemsType?.title ?? "")
+        .toolbar(.hidden, for: .tabBar)
     }
     
     private var content: some View {
         ScrollView {
             LazyVStack {
                 ForEach(filteredItems) { item in
-                    NavigationLink(
-                        destination: SelectSubjectView(
-                            subject: item,
-                            selectedSubjectId: $selectedSubjectId,
-                            isActive: $isActive
-                        )
-                    ) {
-                        HStack {
-                            Text(item.name)
-                                .font(.system(size: 17))
-                                .padding(.vertical, 19)
-                            
-                            Spacer()
-                            
-                            Symbol.chevronForward.image
-                                .font(.system(size: 19))
+                    Button(
+                        action: {
+                            if item.items.isEmpty {
+                                selectedSubjectId = item.id
+                                path.removeAll()
+                            }
+                            else {
+                                path.append(
+                                    .route(.init(selectedId: $selectedSubjectId, subject: item))
+                                )
+                            }
+                        },
+                        label: {
+                            HStack {
+                                Text(item.name)
+                                    .font(.system(size: 17))
+                                    .padding(.vertical, 19)
+                                
+                                Spacer()
+                                
+                                Symbol.chevronForward.image
+                                    .font(.system(size: 19))
+                            }
                         }
-                    }
+                    )
                 }
             }
         }
@@ -95,7 +91,7 @@ extension SelectSubjectView: View {
 #Preview {
     SelectSubjectView(
         subject: .mockData,
-        selectedSubjectId: .constant(UUID()),
-        isActive: .constant(false)
+        path: .constant([]),
+        selectedSubjectId: .constant(UUID())
     )
 }

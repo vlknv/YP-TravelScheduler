@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Subject: Identifiable, Named {
+struct Subject: Identifiable, Hashable, Named {
     let id: UUID
     
     let name: String
