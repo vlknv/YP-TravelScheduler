@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct RouteView: View {
+    @EnvironmentObject private var router: MainRouter
+    
     private let subject: Subject = .mockData
     
     @Binding var fromStationId: UUID?
@@ -27,12 +29,12 @@ struct RouteView: View {
     
     private var routePoints: some View {
         VStack(alignment: .leading, spacing: 28) {
-            navigationLink(
+            navigation(
                 name: "Откуда",
                 parameters: .init(selectedId: $fromStationId, subject: subject)
             )
             
-            navigationLink(
+            navigation(
                 name: "Куда",
                 parameters: .init(selectedId: $toStationId, subject: subject)
             )
@@ -61,22 +63,27 @@ struct RouteView: View {
         .clipShape(.circle)
     }
     
-    private func navigationLink(
+    private func navigation(
         name: String,
         parameters: MainDestination.Route
     ) -> some View {
-        NavigationLink(value: MainDestination.route(parameters)) {
-            if let id = parameters.selectedId.wrappedValue {
-                Text(subject.getRouteNameBy(id: id) ?? "")
-                    .foregroundStyle(.c3BlackUniversal)
-                    .frame(maxWidth: .infinity, alignment: .leading)
+        Button(
+            action: {
+                router.push(.route(parameters))
+            },
+            label: {
+                if let id = parameters.selectedId.wrappedValue {
+                    Text(subject.getRouteNameBy(id: id) ?? "")
+                        .foregroundStyle(.c3BlackUniversal)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
+                else {
+                    Text(name)
+                        .foregroundStyle(.c1Gray)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
             }
-            else {
-                Text(name)
-                    .foregroundStyle(.c1Gray)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-            }
-        }
+        )
     }
 }
 

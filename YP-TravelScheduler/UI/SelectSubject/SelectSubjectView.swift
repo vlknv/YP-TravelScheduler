@@ -8,20 +8,18 @@
 import SwiftUI
 
 struct SelectSubjectView {
+    @EnvironmentObject private var router: MainRouter
+    
     private let subject: Subject
+    @Binding private var selectedSubjectId: UUID?
     
     @State private var filteredItems: [Subject]
 
-    @Binding private var path: [MainDestination]
-    @Binding private var selectedSubjectId: UUID?
-        
     init(
         subject: Subject,
-        path: Binding<[MainDestination]>,
         selectedSubjectId: Binding<UUID?>
     ) {
         self.subject = subject
-        self._path = path
         self._selectedSubjectId = selectedSubjectId
         
         _filteredItems = State(initialValue: subject.items)
@@ -35,7 +33,7 @@ extension SelectSubjectView: View {
                 items: subject.items,
                 filteredItems: $filteredItems
             )
-
+            
             ZStack {
                 content
                     .opacity(filteredItems.isEmpty ? 0 : 1)
@@ -48,8 +46,7 @@ extension SelectSubjectView: View {
         }
         .padding(.horizontal, 16)
         .background(.c6White)
-        .toolbarRole(.editor)
-        .navigationTitle(subject.itemsType?.title ?? "")
+        .customToolbar(title: subject.itemsType?.title, router: router)
         .toolbar(.hidden, for: .tabBar)
     }
     
@@ -61,11 +58,13 @@ extension SelectSubjectView: View {
                         action: {
                             if item.items.isEmpty {
                                 selectedSubjectId = item.id
-                                path.removeAll()
+                                router.popToRoot()
                             }
                             else {
-                                path.append(
-                                    .route(.init(selectedId: $selectedSubjectId, subject: item))
+                                router.push(
+                                    .route(
+                                        .init(selectedId: $selectedSubjectId, subject: item)
+                                    )
                                 )
                             }
                         },
@@ -91,7 +90,6 @@ extension SelectSubjectView: View {
 #Preview {
     SelectSubjectView(
         subject: .mockData,
-        path: .constant([]),
         selectedSubjectId: .constant(UUID())
     )
 }

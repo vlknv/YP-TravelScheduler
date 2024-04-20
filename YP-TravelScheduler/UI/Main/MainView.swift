@@ -8,63 +8,43 @@
 import SwiftUI
 
 struct MainView: View {
+    @EnvironmentObject private var router: MainRouter
     @StateObject private var storiesViewModel = StoryViewModel()
     
-    @State private var path: [MainDestination] = []
-
     @State private var fromStationId: UUID?
     @State private var toStationId: UUID?
     
     var body: some View {
-        NavigationStack(path: $path) {
-            VStack(spacing: 16) {
-                StoriesBlockView().environmentObject(storiesViewModel)
-                
-                RouteView(
-                    fromStationId: $fromStationId,
-                    toStationId: $toStationId
-                )
-                
-                if fromStationId != nil && toStationId != nil {
-                    findButton
-                }
-                
-                Spacer()
-                
-                Divider()
+        VStack(spacing: 16) {
+            StoriesBlockView().environmentObject(storiesViewModel)
+            
+            RouteView(
+                fromStationId: $fromStationId,
+                toStationId: $toStationId
+            )
+            
+            if fromStationId != nil && toStationId != nil {
+                findButton
             }
-            .background(.c6White)
-            .navigationDestination(for: MainDestination.self) { destination in
-                switch destination {
-                case .route(let parameters):
-                    SelectSubjectView(
-                        subject: parameters.subject,
-                        path: $path,
-                        selectedSubjectId: parameters.selectedId
-                    )
-                    
-                case .selectCarrier:
-                    SelectCarrierView()
-                    
-                case .carrierInfo(let carrier):
-                    CarrierInfoView(carrier: carrier)
-                    
-                case .routesFilter(let parameters):
-                    RoutesFilterView(
-                        selectedRouteIntervals: parameters.selectedRouteIntervals,
-                        transferVariant: parameters.transferVariant
-                    )
-                }
-            }
+            
+            Spacer()
+            
+            Divider()
         }
+        .background(.c6White)
     }
     
     private var findButton: some View {
-        NavigationLink(value: MainDestination.selectCarrier) {
-            Text("Найти")
-                .font(.system(size: 17, weight: .bold))
-                .frame(width: 150)
-        }
+        Button(
+            action: {
+                router.push(.selectCarrier)
+            },
+            label: {
+                Text("Найти")
+                    .font(.system(size: 17, weight: .bold))
+                    .frame(width: 150)
+            }
+        )
         .buttonStyle(.blueRoundedButton)
     }
 }

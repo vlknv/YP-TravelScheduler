@@ -14,14 +14,22 @@ struct MainTabView: View {
     
     var body: some View {
         TabView {
-            MainView()
-                .tabItem {
-                    Image(.message)
-                }
+            RouterView(
+                content: MainView.init,
+                router: MainRouter()
+            )
+            .tabItem {
+                Image(.message)
+            }
             
-            SettingsView(
-                darkMode: $darkMode,
-                error: $error
+            RouterView(
+                content: {
+                    SettingsView(
+                        darkMode: $darkMode,
+                        error: $error
+                    )
+                },
+                router: SettingsRouter()
             )
             .tabItem {
                 Image(.gear)

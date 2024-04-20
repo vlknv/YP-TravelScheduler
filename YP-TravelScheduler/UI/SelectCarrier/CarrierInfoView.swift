@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct CarrierInfoView: View {
+    @EnvironmentObject private var router: MainRouter
+    
     let carrier: Carrier
     
     var body: some View {
@@ -32,8 +34,7 @@ struct CarrierInfoView: View {
         .padding(16)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(.c6White)
-        .navigationTitle("Информация о перевозчике")
-        .toolbarRole(.editor)
+        .customToolbar(title: "Информация о перевозчике", router: router)
     }
     
     private func detailsView(_ contact: Contact) -> some View {

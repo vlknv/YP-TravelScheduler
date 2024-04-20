@@ -8,37 +8,28 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @EnvironmentObject private var router: SettingsRouter
+    
     @Binding var darkMode: Bool
     @Binding var error: NetworkError?
     
     var body: some View {
-        NavigationStack {
-            VStack(spacing: 0) {
-                darkModeSwitch
-                
-                userAgreement
-                
-                #if DEBUG
-                showError
-                #endif
-                
-                Spacer()
-                
-                footer
-            }
-            .padding(.horizontal, 16)
-            .padding(.vertical, 24)
-            .background(.c6White)
-            .navigationDestination(for: SettingsDestination.self) { destination in
-                switch destination {
-                case .userAgreement:
-                    WebView()
-                        .background(.c6White)
-                        .navigationTitle("Пользовательское соглашение")
-                        .toolbar(.hidden, for: .tabBar)
-                }
-            }
+        VStack(spacing: 0) {
+            darkModeSwitch
+            
+            userAgreement
+            
+            #if DEBUG
+            showError
+            #endif
+            
+            Spacer()
+            
+            footer
         }
+        .padding(.horizontal, 16)
+        .padding(.vertical, 24)
+        .background(.c6White)
     }
     
     private var darkModeSwitch: some View {
@@ -51,19 +42,24 @@ struct SettingsView: View {
     }
     
     private var userAgreement: some View {
-        NavigationLink(value: SettingsDestination.userAgreement) {
-            HStack {
-                Text("Пользовательское соглашение")
-                    .font(.system(size: 17))
-                    .padding(.vertical, 19)
-                
-                Spacer()
-                
-                Symbol.chevronForward.image
-                    .font(.system(size: 19))
+        Button(
+            action: {
+                router.push(.userAgreement)
+            },
+            label: {
+                HStack {
+                    Text("Пользовательское соглашение")
+                        .font(.system(size: 17))
+                        .padding(.vertical, 19)
+                    
+                    Spacer()
+                    
+                    Symbol.chevronForward.image
+                        .font(.system(size: 19))
+                }
+                .frame(height: 60)
             }
-            .frame(height: 60)
-        }
+        )
     }
     
     private var showError: some View {

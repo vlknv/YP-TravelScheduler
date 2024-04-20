@@ -40,12 +40,19 @@
 		78529B392BC2ECAD004FDD74 /* ProgressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78529B382BC2ECAD004FDD74 /* ProgressViewModel.swift */; };
 		7876173A2BC9CB1600BA94EE /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787617392BC9CB1500BA94EE /* Subject.swift */; };
 		787617402BCBCEED00BA94EE /* RoutesFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876173F2BCBCEED00BA94EE /* RoutesFilterView.swift */; };
-		787617442BCBDF4900BA94EE /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787617432BCBDF4900BA94EE /* ButtonStyle.swift */; };
+		787617442BCBDF4900BA94EE /* ButtonStyle+blueRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787617432BCBDF4900BA94EE /* ButtonStyle+blueRoundedButton.swift */; };
 		787617492BCBE1F200BA94EE /* RouteInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787617482BCBE1F200BA94EE /* RouteInterval.swift */; };
 		7876174B2BCBE20700BA94EE /* TransferVariant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876174A2BCBE20700BA94EE /* TransferVariant.swift */; };
 		7876174D2BCBEE6A00BA94EE /* Date+component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876174C2BCBEE6A00BA94EE /* Date+component.swift */; };
 		787617522BCC102800BA94EE /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787617512BCC102800BA94EE /* ErrorView.swift */; };
 		787617562BCC105100BA94EE /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787617552BCC105100BA94EE /* NetworkError.swift */; };
+		789B40EC2BD2F6C800DC3CB4 /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789B40EB2BD2F6C800DC3CB4 /* RouterProtocol.swift */; };
+		789B40F12BD3144400DC3CB4 /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789B40F02BD3144400DC3CB4 /* RouterView.swift */; };
+		789B40F32BD3179A00DC3CB4 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789B40F22BD3179A00DC3CB4 /* MainRouter.swift */; };
+		789B40F62BD31D0C00DC3CB4 /* SettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789B40F52BD31D0C00DC3CB4 /* SettingsRouter.swift */; };
+		789B40FC2BD3A2DA00DC3CB4 /* CustomToolbarContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789B40FB2BD3A2DA00DC3CB4 /* CustomToolbarContent.swift */; };
+		789B40FF2BD3AA9200DC3CB4 /* View+customToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789B40FE2BD3AA9200DC3CB4 /* View+customToolbar.swift */; };
+		789B41012BD3AACB00DC3CB4 /* CustomToolbarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789B41002BD3AACB00DC3CB4 /* CustomToolbarModifier.swift */; };
 		78C132712BD1B22900ABB205 /* Binging+hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C132702BD1B22900ABB205 /* Binging+hashable.swift */; };
 		78C132742BD1B28600ABB205 /* MainDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C132732BD1B28600ABB205 /* MainDestination.swift */; };
 		78C132792BD1B5CB00ABB205 /* SettingsDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C132782BD1B5CB00ABB205 /* SettingsDestination.swift */; };
@@ -91,12 +98,19 @@
 		78529B382BC2ECAD004FDD74 /* ProgressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewModel.swift; sourceTree = "<group>"; };
 		787617392BC9CB1500BA94EE /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
 		7876173F2BCBCEED00BA94EE /* RoutesFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesFilterView.swift; sourceTree = "<group>"; };
-		787617432BCBDF4900BA94EE /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
+		787617432BCBDF4900BA94EE /* ButtonStyle+blueRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonStyle+blueRoundedButton.swift"; sourceTree = "<group>"; };
 		787617482BCBE1F200BA94EE /* RouteInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteInterval.swift; sourceTree = "<group>"; };
 		7876174A2BCBE20700BA94EE /* TransferVariant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferVariant.swift; sourceTree = "<group>"; };
 		7876174C2BCBEE6A00BA94EE /* Date+component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+component.swift"; sourceTree = "<group>"; };
 		787617512BCC102800BA94EE /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		787617552BCC105100BA94EE /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		789B40EB2BD2F6C800DC3CB4 /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
+		789B40F02BD3144400DC3CB4 /* RouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
+		789B40F22BD3179A00DC3CB4 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		789B40F52BD31D0C00DC3CB4 /* SettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRouter.swift; sourceTree = "<group>"; };
+		789B40FB2BD3A2DA00DC3CB4 /* CustomToolbarContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToolbarContent.swift; sourceTree = "<group>"; };
+		789B40FE2BD3AA9200DC3CB4 /* View+customToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+customToolbar.swift"; sourceTree = "<group>"; };
+		789B41002BD3AACB00DC3CB4 /* CustomToolbarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToolbarModifier.swift; sourceTree = "<group>"; };
 		78C132702BD1B22900ABB205 /* Binging+hashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binging+hashable.swift"; sourceTree = "<group>"; };
 		78C132732BD1B28600ABB205 /* MainDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDestination.swift; sourceTree = "<group>"; };
 		78C132782BD1B5CB00ABB205 /* SettingsDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDestination.swift; sourceTree = "<group>"; };
@@ -245,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				780BC23A2BC161770099CBB7 /* MainTabView.swift */,
+				789B40EF2BD3134900DC3CB4 /* Shared */,
 				78529B242BC2C0EF004FDD74 /* Main */,
 				78529B2C2BC2C6FD004FDD74 /* Story */,
 				78529B262BC2C11F004FDD74 /* SelectSubject */,
@@ -268,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				787617382BC9CB0A00BA94EE /* Items */,
+				789B40F22BD3179A00DC3CB4 /* MainRouter.swift */,
 				780BC2362BC161320099CBB7 /* MainView.swift */,
 				78529B212BC2C0D9004FDD74 /* StoriesBlockView.swift */,
 				78529B272BC2C1A9004FDD74 /* RouteView.swift */,
@@ -279,6 +295,7 @@
 			isa = PBXGroup;
 			children = (
 				78C132762BD1B5C200ABB205 /* Items */,
+				789B40F52BD31D0C00DC3CB4 /* SettingsRouter.swift */,
 				780BC2382BC161550099CBB7 /* SettingsView.swift */,
 				78C1327A2BD1B5E200ABB205 /* WebView.swift */,
 			);
@@ -345,7 +362,8 @@
 		787617412BCBDF3900BA94EE /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				787617432BCBDF4900BA94EE /* ButtonStyle.swift */,
+				787617432BCBDF4900BA94EE /* ButtonStyle+blueRoundedButton.swift */,
+				789B40FE2BD3AA9200DC3CB4 /* View+customToolbar.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -365,6 +383,33 @@
 				787617512BCC102800BA94EE /* ErrorView.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		789B40EF2BD3134900DC3CB4 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				789B40FA2BD3A2B100DC3CB4 /* Toolbar */,
+				789B40F82BD3A2AA00DC3CB4 /* Router */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		789B40F82BD3A2AA00DC3CB4 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				789B40EB2BD2F6C800DC3CB4 /* RouterProtocol.swift */,
+				789B40F02BD3144400DC3CB4 /* RouterView.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		789B40FA2BD3A2B100DC3CB4 /* Toolbar */ = {
+			isa = PBXGroup;
+			children = (
+				789B40FB2BD3A2DA00DC3CB4 /* CustomToolbarContent.swift */,
+				789B41002BD3AACB00DC3CB4 /* CustomToolbarModifier.swift */,
+			);
+			path = Toolbar;
 			sourceTree = "<group>";
 		};
 		78C132762BD1B5C200ABB205 /* Items */ = {
@@ -499,28 +544,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				789B40EC2BD2F6C800DC3CB4 /* RouterProtocol.swift in Sources */,
 				783A641B2BCC6E9500AFA46F /* ProgressState.swift in Sources */,
 				78C1327B2BD1B5E200ABB205 /* WebView.swift in Sources */,
 				78164CC02BC58ED00048D362 /* Route.swift in Sources */,
+				789B40FF2BD3AA9200DC3CB4 /* View+customToolbar.swift in Sources */,
 				7876174D2BCBEE6A00BA94EE /* Date+component.swift in Sources */,
 				780BC2392BC161550099CBB7 /* SettingsView.swift in Sources */,
 				783C44B92BC5A8A800C67944 /* DateFormatter+static.swift in Sources */,
 				78164CB22BC465270048D362 /* Collection+elementOrNil.swift in Sources */,
 				783A640D2BCC1BB700AFA46F /* SearchFieldView.swift in Sources */,
+				789B40F12BD3144400DC3CB4 /* RouterView.swift in Sources */,
 				78529B282BC2C1A9004FDD74 /* RouteView.swift in Sources */,
 				78529B392BC2ECAD004FDD74 /* ProgressViewModel.swift in Sources */,
 				7876174B2BCBE20700BA94EE /* TransferVariant.swift in Sources */,
 				78164CC22BC590690048D362 /* ScheduleView.swift in Sources */,
 				78529B342BC2E27D004FDD74 /* StoryViewModel.swift in Sources */,
+				789B40FC2BD3A2DA00DC3CB4 /* CustomToolbarContent.swift in Sources */,
 				787617402BCBCEED00BA94EE /* RoutesFilterView.swift in Sources */,
 				780BC2372BC161320099CBB7 /* MainView.swift in Sources */,
 				787617492BCBE1F200BA94EE /* RouteInterval.swift in Sources */,
 				787617562BCC105100BA94EE /* NetworkError.swift in Sources */,
+				789B41012BD3AACB00DC3CB4 /* CustomToolbarModifier.swift in Sources */,
 				780BC23B2BC161770099CBB7 /* MainTabView.swift in Sources */,
 				78EFBF152B9CD67A00625539 /* ResponseTypes.swift in Sources */,
 				78EFBF1C2B9CD6ED00625539 /* ScheduleRequestServiceProtocol.swift in Sources */,
-				787617442BCBDF4900BA94EE /* ButtonStyle.swift in Sources */,
+				787617442BCBDF4900BA94EE /* ButtonStyle+blueRoundedButton.swift in Sources */,
 				7876173A2BC9CB1600BA94EE /* Subject.swift in Sources */,
+				789B40F32BD3179A00DC3CB4 /* MainRouter.swift in Sources */,
 				78164CBD2BC58E2F0048D362 /* SelectCarrierView.swift in Sources */,
 				78EDC6A92BC5C204006401EB /* CarrierInfoView.swift in Sources */,
 				78529B222BC2C0D9004FDD74 /* StoriesBlockView.swift in Sources */,
@@ -533,6 +584,7 @@
 				783A64112BCC635100AFA46F /* Named.swift in Sources */,
 				78EFBF1A2B9CD6BC00625539 /* ScheduleRequestService.swift in Sources */,
 				780732092B9374BB008A184D /* YPTravelSchedulerApp.swift in Sources */,
+				789B40F62BD31D0C00DC3CB4 /* SettingsRouter.swift in Sources */,
 				78C132792BD1B5CB00ABB205 /* SettingsDestination.swift in Sources */,
 				78C132742BD1B28600ABB205 /* MainDestination.swift in Sources */,
 				78C132712BD1B22900ABB205 /* Binging+hashable.swift in Sources */,

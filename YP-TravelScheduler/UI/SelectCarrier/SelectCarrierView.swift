@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SelectCarrierView: View {
+    @EnvironmentObject private var router: MainRouter
+
     private let route: Route = .mockRoute
 
     @State private var selectedRouteIntervals: Set<RouteInterval> = []
@@ -25,11 +27,14 @@ struct SelectCarrierView: View {
                 ScrollView {
                     LazyVStack {
                         ForEach(filteredVariants) { schedule in
-                            NavigationLink(
-                                value: MainDestination.carrierInfo(schedule.carrier)
-                            ) {
-                                ScheduleView(schedule: schedule)
-                            }
+                            Button(
+                                action: {
+                                    router.push(.carrierInfo(schedule.carrier))
+                                },
+                                label: {
+                                    ScheduleView(schedule: schedule)
+                                }
+                            )
                         }
                     }
                 }
@@ -45,25 +50,30 @@ struct SelectCarrierView: View {
         }
         .frame(maxHeight: .infinity)
         .overlay(alignment: .bottom) {
-            NavigationLink(
-                value: MainDestination.routesFilter(
-                    .init(
-                        selectedRouteIntervals: $selectedRouteIntervals,
-                        transferVariant: $transferVariant
+            Button(
+                action: {
+                    router.push(
+                        .routesFilter(
+                            .init(
+                                selectedRouteIntervals: $selectedRouteIntervals,
+                                transferVariant: $transferVariant
+                            )
+                        )
                     )
-                )
-            ) {
-                Text("Уточнить время")
-                    .font(.system(size: 17, weight: .bold))
-                    .frame(maxWidth: .infinity)
-                    .foregroundStyle(.white)
-            }
+                },
+                label: {
+                    Text("Уточнить время")
+                        .font(.system(size: 17, weight: .bold))
+                        .frame(maxWidth: .infinity)
+                        .foregroundStyle(.white)
+                }
+            )
             .buttonStyle(.blueRoundedButton)
             .padding(.bottom, 8)
         }
         .padding(16)
         .background(.c6White)
-        .toolbarRole(.editor)
+        .customToolbar(router: router)
         .toolbar(.hidden, for: .tabBar)
         .onAppear {
             filteredVariants = route.variants.filter(variantFilter)

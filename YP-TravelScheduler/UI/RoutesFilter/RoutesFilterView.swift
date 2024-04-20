@@ -13,6 +13,8 @@ struct RoutesFilterView {
     @Environment(\.dismiss)
     private var dismiss
     
+    @EnvironmentObject private var router: MainRouter
+
     private let formatter = DateComponentsFormatter.hoursAndMinutes
     
     @State private var initialSelectedRouteIntervals: Set<RouteInterval>
@@ -66,7 +68,7 @@ extension RoutesFilterView: View {
         .padding([.horizontal, .top], 16)
         .padding(.bottom, 24)
         .background(.c6White)
-        .toolbarRole(.editor)
+        .customToolbar(router: router)
     }
     
     private var timeFiltering: some View {
