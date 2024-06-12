@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct YPTravelSchedulerApp: App {
+    @State private var darkMode = false
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainTabView(darkMode: $darkMode)
+                .preferredColorScheme(darkMode ? .dark : .light)
+                .accentColor(.primary)
         }
     }
 }

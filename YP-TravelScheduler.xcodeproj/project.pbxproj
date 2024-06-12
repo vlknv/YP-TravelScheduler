@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		780732092B9374BB008A184D /* YPTravelSchedulerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780732082B9374BB008A184D /* YPTravelSchedulerApp.swift */; };
-		7807320B2B9374BB008A184D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7807320A2B9374BB008A184D /* ContentView.swift */; };
 		7807320D2B9374BD008A184D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7807320C2B9374BD008A184D /* Assets.xcassets */; };
 		7807321A2B94E5BA008A184D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 780732192B94E5BA008A184D /* Colors.xcassets */; };
 		7807321C2B94E65B008A184D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 7807321B2B94E65B008A184D /* Localizable.xcstrings */; };
@@ -16,27 +15,111 @@
 		780732272B94E952008A184D /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = 780732262B94E952008A184D /* OpenAPIURLSession */; };
 		7807322C2B94EB8A008A184D /* openapi.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 7807322B2B94EB8A008A184D /* openapi.yaml */; };
 		7807322E2B94EBE0008A184D /* openapi-generator-config.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 7807322D2B94EBE0008A184D /* openapi-generator-config.yaml */; };
+		780BC2372BC161320099CBB7 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780BC2362BC161320099CBB7 /* MainView.swift */; };
+		780BC2392BC161550099CBB7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780BC2382BC161550099CBB7 /* SettingsView.swift */; };
+		780BC23B2BC161770099CBB7 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780BC23A2BC161770099CBB7 /* MainTabView.swift */; };
+		780BC23D2BC2B7370099CBB7 /* SelectSubjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780BC23C2BC2B7370099CBB7 /* SelectSubjectView.swift */; };
+		78164CB22BC465270048D362 /* Collection+elementOrNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78164CB12BC465270048D362 /* Collection+elementOrNil.swift */; };
+		78164CBD2BC58E2F0048D362 /* SelectCarrierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78164CBC2BC58E2F0048D362 /* SelectCarrierView.swift */; };
+		78164CC02BC58ED00048D362 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78164CBF2BC58ED00048D362 /* Route.swift */; };
+		78164CC22BC590690048D362 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78164CC12BC590690048D362 /* ScheduleView.swift */; };
+		783A64072BCC174700AFA46F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 783A64062BCC174700AFA46F /* LaunchScreen.storyboard */; };
+		783A640D2BCC1BB700AFA46F /* SearchFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A640C2BCC1BB700AFA46F /* SearchFieldView.swift */; };
+		783A64112BCC635100AFA46F /* Named.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A64102BCC635100AFA46F /* Named.swift */; };
+		783A64142BCC68EE00AFA46F /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A64132BCC68EE00AFA46F /* Symbol.swift */; };
+		783A64172BCC6D4200AFA46F /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A64162BCC6D4200AFA46F /* Contact.swift */; };
+		783A641B2BCC6E9500AFA46F /* ProgressState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783A641A2BCC6E9500AFA46F /* ProgressState.swift */; };
+		783C44B52BC5A39D00C67944 /* DateComponentsFormatter+static.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783C44B42BC5A39D00C67944 /* DateComponentsFormatter+static.swift */; };
+		783C44B92BC5A8A800C67944 /* DateFormatter+static.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783C44B82BC5A8A800C67944 /* DateFormatter+static.swift */; };
+		78529B222BC2C0D9004FDD74 /* StoriesBlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78529B212BC2C0D9004FDD74 /* StoriesBlockView.swift */; };
+		78529B282BC2C1A9004FDD74 /* RouteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78529B272BC2C1A9004FDD74 /* RouteView.swift */; };
+		78529B2B2BC2C1FF004FDD74 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78529B2A2BC2C1FF004FDD74 /* Story.swift */; };
+		78529B2E2BC2C71F004FDD74 /* StoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78529B2D2BC2C71F004FDD74 /* StoryView.swift */; };
+		78529B312BC2CC91004FDD74 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78529B302BC2CC91004FDD74 /* ProgressView.swift */; };
+		78529B342BC2E27D004FDD74 /* StoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78529B332BC2E27D004FDD74 /* StoryViewModel.swift */; };
+		78529B392BC2ECAD004FDD74 /* ProgressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78529B382BC2ECAD004FDD74 /* ProgressViewModel.swift */; };
+		7876173A2BC9CB1600BA94EE /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787617392BC9CB1500BA94EE /* Subject.swift */; };
+		787617402BCBCEED00BA94EE /* RoutesFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876173F2BCBCEED00BA94EE /* RoutesFilterView.swift */; };
+		787617442BCBDF4900BA94EE /* ButtonStyle+blueRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787617432BCBDF4900BA94EE /* ButtonStyle+blueRoundedButton.swift */; };
+		787617492BCBE1F200BA94EE /* RouteInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787617482BCBE1F200BA94EE /* RouteInterval.swift */; };
+		7876174B2BCBE20700BA94EE /* TransferVariant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876174A2BCBE20700BA94EE /* TransferVariant.swift */; };
+		7876174D2BCBEE6A00BA94EE /* Date+component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876174C2BCBEE6A00BA94EE /* Date+component.swift */; };
+		787617522BCC102800BA94EE /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787617512BCC102800BA94EE /* ErrorView.swift */; };
+		787617562BCC105100BA94EE /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787617552BCC105100BA94EE /* NetworkError.swift */; };
+		789B40EC2BD2F6C800DC3CB4 /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789B40EB2BD2F6C800DC3CB4 /* RouterProtocol.swift */; };
+		789B40F12BD3144400DC3CB4 /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789B40F02BD3144400DC3CB4 /* RouterView.swift */; };
+		789B40F32BD3179A00DC3CB4 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789B40F22BD3179A00DC3CB4 /* MainRouter.swift */; };
+		789B40F62BD31D0C00DC3CB4 /* SettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789B40F52BD31D0C00DC3CB4 /* SettingsRouter.swift */; };
+		789B40FC2BD3A2DA00DC3CB4 /* CustomToolbarContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789B40FB2BD3A2DA00DC3CB4 /* CustomToolbarContent.swift */; };
+		789B40FF2BD3AA9200DC3CB4 /* View+customToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789B40FE2BD3AA9200DC3CB4 /* View+customToolbar.swift */; };
+		789B41012BD3AACB00DC3CB4 /* CustomToolbarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789B41002BD3AACB00DC3CB4 /* CustomToolbarModifier.swift */; };
+		78C132712BD1B22900ABB205 /* Binging+hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C132702BD1B22900ABB205 /* Binging+hashable.swift */; };
+		78C132742BD1B28600ABB205 /* MainDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C132732BD1B28600ABB205 /* MainDestination.swift */; };
+		78C132792BD1B5CB00ABB205 /* SettingsDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C132782BD1B5CB00ABB205 /* SettingsDestination.swift */; };
+		78C1327B2BD1B5E200ABB205 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C1327A2BD1B5E200ABB205 /* WebView.swift */; };
+		78EDC6A92BC5C204006401EB /* CarrierInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EDC6A82BC5C204006401EB /* CarrierInfoView.swift */; };
+		78EDC6AC2BC5C33A006401EB /* Carrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EDC6AB2BC5C33A006401EB /* Carrier.swift */; };
 		78EFBF152B9CD67A00625539 /* ResponseTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EFBF142B9CD67A00625539 /* ResponseTypes.swift */; };
 		78EFBF1A2B9CD6BC00625539 /* ScheduleRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EFBF192B9CD6BC00625539 /* ScheduleRequestService.swift */; };
 		78EFBF1C2B9CD6ED00625539 /* ScheduleRequestServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EFBF1B2B9CD6ED00625539 /* ScheduleRequestServiceProtocol.swift */; };
-		D07701DEB248686B5745132C /* Pods_YP_TravelScheduler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA11CDCC97748143EA42B29 /* Pods_YP_TravelScheduler.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2D5A00C3034EC9DD9881E798 /* Pods-YP-TravelScheduler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YP-TravelScheduler.debug.xcconfig"; path = "Target Support Files/Pods-YP-TravelScheduler/Pods-YP-TravelScheduler.debug.xcconfig"; sourceTree = "<group>"; };
 		780732052B9374BB008A184D /* YP-TravelScheduler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YP-TravelScheduler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		780732082B9374BB008A184D /* YPTravelSchedulerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YPTravelSchedulerApp.swift; sourceTree = "<group>"; };
-		7807320A2B9374BB008A184D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7807320C2B9374BD008A184D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		780732192B94E5BA008A184D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		7807321B2B94E65B008A184D /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		7807322B2B94EB8A008A184D /* openapi.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = openapi.yaml; sourceTree = "<group>"; };
 		7807322D2B94EBE0008A184D /* openapi-generator-config.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "openapi-generator-config.yaml"; sourceTree = "<group>"; };
+		780BC2362BC161320099CBB7 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		780BC2382BC161550099CBB7 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		780BC23A2BC161770099CBB7 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		780BC23C2BC2B7370099CBB7 /* SelectSubjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSubjectView.swift; sourceTree = "<group>"; };
+		78164CB12BC465270048D362 /* Collection+elementOrNil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+elementOrNil.swift"; sourceTree = "<group>"; };
+		78164CBC2BC58E2F0048D362 /* SelectCarrierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCarrierView.swift; sourceTree = "<group>"; };
+		78164CBF2BC58ED00048D362 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		78164CC12BC590690048D362 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		783A64002BCC149700AFA46F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		783A64062BCC174700AFA46F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		783A640C2BCC1BB700AFA46F /* SearchFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFieldView.swift; sourceTree = "<group>"; };
+		783A64102BCC635100AFA46F /* Named.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Named.swift; sourceTree = "<group>"; };
+		783A64132BCC68EE00AFA46F /* Symbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
+		783A64162BCC6D4200AFA46F /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		783A641A2BCC6E9500AFA46F /* ProgressState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressState.swift; sourceTree = "<group>"; };
+		783C44B42BC5A39D00C67944 /* DateComponentsFormatter+static.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateComponentsFormatter+static.swift"; sourceTree = "<group>"; };
+		783C44B82BC5A8A800C67944 /* DateFormatter+static.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+static.swift"; sourceTree = "<group>"; };
+		78529B212BC2C0D9004FDD74 /* StoriesBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesBlockView.swift; sourceTree = "<group>"; };
+		78529B272BC2C1A9004FDD74 /* RouteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteView.swift; sourceTree = "<group>"; };
+		78529B2A2BC2C1FF004FDD74 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		78529B2D2BC2C71F004FDD74 /* StoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryView.swift; sourceTree = "<group>"; };
+		78529B302BC2CC91004FDD74 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		78529B332BC2E27D004FDD74 /* StoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewModel.swift; sourceTree = "<group>"; };
+		78529B382BC2ECAD004FDD74 /* ProgressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewModel.swift; sourceTree = "<group>"; };
+		787617392BC9CB1500BA94EE /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
+		7876173F2BCBCEED00BA94EE /* RoutesFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesFilterView.swift; sourceTree = "<group>"; };
+		787617432BCBDF4900BA94EE /* ButtonStyle+blueRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonStyle+blueRoundedButton.swift"; sourceTree = "<group>"; };
+		787617482BCBE1F200BA94EE /* RouteInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteInterval.swift; sourceTree = "<group>"; };
+		7876174A2BCBE20700BA94EE /* TransferVariant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferVariant.swift; sourceTree = "<group>"; };
+		7876174C2BCBEE6A00BA94EE /* Date+component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+component.swift"; sourceTree = "<group>"; };
+		787617512BCC102800BA94EE /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		787617552BCC105100BA94EE /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		789B40EB2BD2F6C800DC3CB4 /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
+		789B40F02BD3144400DC3CB4 /* RouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
+		789B40F22BD3179A00DC3CB4 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		789B40F52BD31D0C00DC3CB4 /* SettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRouter.swift; sourceTree = "<group>"; };
+		789B40FB2BD3A2DA00DC3CB4 /* CustomToolbarContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToolbarContent.swift; sourceTree = "<group>"; };
+		789B40FE2BD3AA9200DC3CB4 /* View+customToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+customToolbar.swift"; sourceTree = "<group>"; };
+		789B41002BD3AACB00DC3CB4 /* CustomToolbarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToolbarModifier.swift; sourceTree = "<group>"; };
+		78C132702BD1B22900ABB205 /* Binging+hashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binging+hashable.swift"; sourceTree = "<group>"; };
+		78C132732BD1B28600ABB205 /* MainDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDestination.swift; sourceTree = "<group>"; };
+		78C132782BD1B5CB00ABB205 /* SettingsDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDestination.swift; sourceTree = "<group>"; };
+		78C1327A2BD1B5E200ABB205 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		78EDC6A82BC5C204006401EB /* CarrierInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrierInfoView.swift; sourceTree = "<group>"; };
+		78EDC6AB2BC5C33A006401EB /* Carrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carrier.swift; sourceTree = "<group>"; };
 		78EFBF142B9CD67A00625539 /* ResponseTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseTypes.swift; sourceTree = "<group>"; };
 		78EFBF192B9CD6BC00625539 /* ScheduleRequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleRequestService.swift; sourceTree = "<group>"; };
 		78EFBF1B2B9CD6ED00625539 /* ScheduleRequestServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleRequestServiceProtocol.swift; sourceTree = "<group>"; };
-		9C37A5BDDD68F64FD04D07BE /* Pods-YP-TravelScheduler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YP-TravelScheduler.release.xcconfig"; path = "Target Support Files/Pods-YP-TravelScheduler/Pods-YP-TravelScheduler.release.xcconfig"; sourceTree = "<group>"; };
-		AEA11CDCC97748143EA42B29 /* Pods_YP_TravelScheduler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YP_TravelScheduler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +129,6 @@
 			files = (
 				780732242B94E91C008A184D /* OpenAPIRuntime in Frameworks */,
 				780732272B94E952008A184D /* OpenAPIURLSession in Frameworks */,
-				D07701DEB248686B5745132C /* Pods_YP_TravelScheduler.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,7 +140,6 @@
 			children = (
 				780732072B9374BB008A184D /* YP-TravelScheduler */,
 				780732062B9374BB008A184D /* Products */,
-				E0BF06B4B5929D9169319B04 /* Pods */,
 				A9318A1268BA3BE0EDA7C364 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -74,7 +155,10 @@
 		780732072B9374BB008A184D /* YP-TravelScheduler */ = {
 			isa = PBXGroup;
 			children = (
+				783A64062BCC174700AFA46F /* LaunchScreen.storyboard */,
+				783A64002BCC149700AFA46F /* Info.plist */,
 				780732082B9374BB008A184D /* YPTravelSchedulerApp.swift */,
+				78164CB42BC465370048D362 /* Extensions */,
 				783382EE2B9DDC4400219DDA /* Localization */,
 				783382ED2B9DDC3500219DDA /* Resourses */,
 				7807322A2B94EB55008A184D /* Services */,
@@ -100,11 +184,46 @@
 			path = OpenAPI;
 			sourceTree = "<group>";
 		};
+		78164CB42BC465370048D362 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				787617412BCBDF3900BA94EE /* UI */,
+				78C132702BD1B22900ABB205 /* Binging+hashable.swift */,
+				78164CB12BC465270048D362 /* Collection+elementOrNil.swift */,
+				783C44B42BC5A39D00C67944 /* DateComponentsFormatter+static.swift */,
+				783C44B82BC5A8A800C67944 /* DateFormatter+static.swift */,
+				7876174C2BCBEE6A00BA94EE /* Date+component.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		78164CBB2BC58E060048D362 /* SelectCarrier */ = {
+			isa = PBXGroup;
+			children = (
+				78164CBE2BC58EC40048D362 /* Items */,
+				78164CBC2BC58E2F0048D362 /* SelectCarrierView.swift */,
+				78164CC12BC590690048D362 /* ScheduleView.swift */,
+				78EDC6A82BC5C204006401EB /* CarrierInfoView.swift */,
+			);
+			path = SelectCarrier;
+			sourceTree = "<group>";
+		};
+		78164CBE2BC58EC40048D362 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				78164CBF2BC58ED00048D362 /* Route.swift */,
+				78EDC6AB2BC5C33A006401EB /* Carrier.swift */,
+				783A64162BCC6D4200AFA46F /* Contact.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
 		783382ED2B9DDC3500219DDA /* Resourses */ = {
 			isa = PBXGroup;
 			children = (
 				780732192B94E5BA008A184D /* Colors.xcassets */,
 				7807320C2B9374BD008A184D /* Assets.xcassets */,
+				783A64132BCC68EE00AFA46F /* Symbol.swift */,
 			);
 			path = Resourses;
 			sourceTree = "<group>";
@@ -139,15 +258,173 @@
 		783382F22B9DDCAF00219DDA /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				7807320A2B9374BB008A184D /* ContentView.swift */,
+				780BC23A2BC161770099CBB7 /* MainTabView.swift */,
+				789B40EF2BD3134900DC3CB4 /* Shared */,
+				78529B242BC2C0EF004FDD74 /* Main */,
+				78529B2C2BC2C6FD004FDD74 /* Story */,
+				78529B262BC2C11F004FDD74 /* SelectSubject */,
+				78164CBB2BC58E060048D362 /* SelectCarrier */,
+				7876173E2BCBCED300BA94EE /* RoutesFilter */,
+				78529B252BC2C0FC004FDD74 /* Settings */,
+				787617502BCC101300BA94EE /* Error */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		783A64192BCC6E8C00AFA46F /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				783A641A2BCC6E9500AFA46F /* ProgressState.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		78529B242BC2C0EF004FDD74 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				787617382BC9CB0A00BA94EE /* Items */,
+				789B40F22BD3179A00DC3CB4 /* MainRouter.swift */,
+				780BC2362BC161320099CBB7 /* MainView.swift */,
+				78529B212BC2C0D9004FDD74 /* StoriesBlockView.swift */,
+				78529B272BC2C1A9004FDD74 /* RouteView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		78529B252BC2C0FC004FDD74 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				78C132762BD1B5C200ABB205 /* Items */,
+				789B40F52BD31D0C00DC3CB4 /* SettingsRouter.swift */,
+				780BC2382BC161550099CBB7 /* SettingsView.swift */,
+				78C1327A2BD1B5E200ABB205 /* WebView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		78529B262BC2C11F004FDD74 /* SelectSubject */ = {
+			isa = PBXGroup;
+			children = (
+				780BC23C2BC2B7370099CBB7 /* SelectSubjectView.swift */,
+				783A640C2BCC1BB700AFA46F /* SearchFieldView.swift */,
+			);
+			path = SelectSubject;
+			sourceTree = "<group>";
+		};
+		78529B292BC2C1F2004FDD74 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				78529B2A2BC2C1FF004FDD74 /* Story.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		78529B2C2BC2C6FD004FDD74 /* Story */ = {
+			isa = PBXGroup;
+			children = (
+				78529B292BC2C1F2004FDD74 /* Items */,
+				78529B362BC2EC94004FDD74 /* Progress */,
+				78529B2D2BC2C71F004FDD74 /* StoryView.swift */,
+				78529B332BC2E27D004FDD74 /* StoryViewModel.swift */,
+			);
+			path = Story;
+			sourceTree = "<group>";
+		};
+		78529B362BC2EC94004FDD74 /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				783A64192BCC6E8C00AFA46F /* Items */,
+				78529B302BC2CC91004FDD74 /* ProgressView.swift */,
+				78529B382BC2ECAD004FDD74 /* ProgressViewModel.swift */,
+			);
+			path = Progress;
+			sourceTree = "<group>";
+		};
+		787617382BC9CB0A00BA94EE /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				78C132732BD1B28600ABB205 /* MainDestination.swift */,
+				783A64102BCC635100AFA46F /* Named.swift */,
+				787617392BC9CB1500BA94EE /* Subject.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		7876173E2BCBCED300BA94EE /* RoutesFilter */ = {
+			isa = PBXGroup;
+			children = (
+				787617462BCBE1E100BA94EE /* Items */,
+				7876173F2BCBCEED00BA94EE /* RoutesFilterView.swift */,
+			);
+			path = RoutesFilter;
+			sourceTree = "<group>";
+		};
+		787617412BCBDF3900BA94EE /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				787617432BCBDF4900BA94EE /* ButtonStyle+blueRoundedButton.swift */,
+				789B40FE2BD3AA9200DC3CB4 /* View+customToolbar.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		787617462BCBE1E100BA94EE /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				787617482BCBE1F200BA94EE /* RouteInterval.swift */,
+				7876174A2BCBE20700BA94EE /* TransferVariant.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		787617502BCC101300BA94EE /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				787617512BCC102800BA94EE /* ErrorView.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		789B40EF2BD3134900DC3CB4 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				789B40FA2BD3A2B100DC3CB4 /* Toolbar */,
+				789B40F82BD3A2AA00DC3CB4 /* Router */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		789B40F82BD3A2AA00DC3CB4 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				789B40EB2BD2F6C800DC3CB4 /* RouterProtocol.swift */,
+				789B40F02BD3144400DC3CB4 /* RouterView.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		789B40FA2BD3A2B100DC3CB4 /* Toolbar */ = {
+			isa = PBXGroup;
+			children = (
+				789B40FB2BD3A2DA00DC3CB4 /* CustomToolbarContent.swift */,
+				789B41002BD3AACB00DC3CB4 /* CustomToolbarModifier.swift */,
+			);
+			path = Toolbar;
+			sourceTree = "<group>";
+		};
+		78C132762BD1B5C200ABB205 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				78C132782BD1B5CB00ABB205 /* SettingsDestination.swift */,
+			);
+			path = Items;
 			sourceTree = "<group>";
 		};
 		78EFBF172B9CD68000625539 /* Items */ = {
 			isa = PBXGroup;
 			children = (
 				78EFBF142B9CD67A00625539 /* ResponseTypes.swift */,
+				787617552BCC105100BA94EE /* NetworkError.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -155,18 +432,8 @@
 		A9318A1268BA3BE0EDA7C364 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AEA11CDCC97748143EA42B29 /* Pods_YP_TravelScheduler.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E0BF06B4B5929D9169319B04 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2D5A00C3034EC9DD9881E798 /* Pods-YP-TravelScheduler.debug.xcconfig */,
-				9C37A5BDDD68F64FD04D07BE /* Pods-YP-TravelScheduler.release.xcconfig */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,12 +443,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 780732142B9374BD008A184D /* Build configuration list for PBXNativeTarget "YP-TravelScheduler" */;
 			buildPhases = (
-				D2702ED6DB83877235C8DB78 /* [CP] Check Pods Manifest.lock */,
 				780732012B9374BB008A184D /* Sources */,
 				780732022B9374BB008A184D /* Frameworks */,
 				780732032B9374BB008A184D /* Resources */,
-				780732182B947477008A184D /* SwiftLint */,
-				E80DF1D03BCFEAFF19BAA38E /* [CP] Embed Pods Frameworks */,
+				788D78A82BD14A3500060A78 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -241,6 +506,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				783A64072BCC174700AFA46F /* LaunchScreen.storyboard in Resources */,
 				7807320D2B9374BD008A184D /* Assets.xcassets in Resources */,
 				7807322C2B94EB8A008A184D /* openapi.yaml in Resources */,
 				7807322E2B94EBE0008A184D /* openapi-generator-config.yaml in Resources */,
@@ -252,7 +518,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		780732182B947477008A184D /* SwiftLint */ = {
+		788D78A82BD14A3500060A78 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
@@ -269,46 +535,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" --fix && \"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
-		};
-		D2702ED6DB83877235C8DB78 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-YP-TravelScheduler-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E80DF1D03BCFEAFF19BAA38E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-YP-TravelScheduler/Pods-YP-TravelScheduler-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-YP-TravelScheduler/Pods-YP-TravelScheduler-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YP-TravelScheduler/Pods-YP-TravelScheduler-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "alias swiftlint=\"/opt/homebrew/bin/swiftlint\"\n\nif swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -317,11 +544,53 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7807320B2B9374BB008A184D /* ContentView.swift in Sources */,
+				789B40EC2BD2F6C800DC3CB4 /* RouterProtocol.swift in Sources */,
+				783A641B2BCC6E9500AFA46F /* ProgressState.swift in Sources */,
+				78C1327B2BD1B5E200ABB205 /* WebView.swift in Sources */,
+				78164CC02BC58ED00048D362 /* Route.swift in Sources */,
+				789B40FF2BD3AA9200DC3CB4 /* View+customToolbar.swift in Sources */,
+				7876174D2BCBEE6A00BA94EE /* Date+component.swift in Sources */,
+				780BC2392BC161550099CBB7 /* SettingsView.swift in Sources */,
+				783C44B92BC5A8A800C67944 /* DateFormatter+static.swift in Sources */,
+				78164CB22BC465270048D362 /* Collection+elementOrNil.swift in Sources */,
+				783A640D2BCC1BB700AFA46F /* SearchFieldView.swift in Sources */,
+				789B40F12BD3144400DC3CB4 /* RouterView.swift in Sources */,
+				78529B282BC2C1A9004FDD74 /* RouteView.swift in Sources */,
+				78529B392BC2ECAD004FDD74 /* ProgressViewModel.swift in Sources */,
+				7876174B2BCBE20700BA94EE /* TransferVariant.swift in Sources */,
+				78164CC22BC590690048D362 /* ScheduleView.swift in Sources */,
+				78529B342BC2E27D004FDD74 /* StoryViewModel.swift in Sources */,
+				789B40FC2BD3A2DA00DC3CB4 /* CustomToolbarContent.swift in Sources */,
+				787617402BCBCEED00BA94EE /* RoutesFilterView.swift in Sources */,
+				780BC2372BC161320099CBB7 /* MainView.swift in Sources */,
+				787617492BCBE1F200BA94EE /* RouteInterval.swift in Sources */,
+				787617562BCC105100BA94EE /* NetworkError.swift in Sources */,
+				789B41012BD3AACB00DC3CB4 /* CustomToolbarModifier.swift in Sources */,
+				780BC23B2BC161770099CBB7 /* MainTabView.swift in Sources */,
 				78EFBF152B9CD67A00625539 /* ResponseTypes.swift in Sources */,
 				78EFBF1C2B9CD6ED00625539 /* ScheduleRequestServiceProtocol.swift in Sources */,
+				787617442BCBDF4900BA94EE /* ButtonStyle+blueRoundedButton.swift in Sources */,
+				7876173A2BC9CB1600BA94EE /* Subject.swift in Sources */,
+				789B40F32BD3179A00DC3CB4 /* MainRouter.swift in Sources */,
+				78164CBD2BC58E2F0048D362 /* SelectCarrierView.swift in Sources */,
+				78EDC6A92BC5C204006401EB /* CarrierInfoView.swift in Sources */,
+				78529B222BC2C0D9004FDD74 /* StoriesBlockView.swift in Sources */,
+				78EDC6AC2BC5C33A006401EB /* Carrier.swift in Sources */,
+				780BC23D2BC2B7370099CBB7 /* SelectSubjectView.swift in Sources */,
+				783C44B52BC5A39D00C67944 /* DateComponentsFormatter+static.swift in Sources */,
+				78529B2E2BC2C71F004FDD74 /* StoryView.swift in Sources */,
+				783A64172BCC6D4200AFA46F /* Contact.swift in Sources */,
+				787617522BCC102800BA94EE /* ErrorView.swift in Sources */,
+				783A64112BCC635100AFA46F /* Named.swift in Sources */,
 				78EFBF1A2B9CD6BC00625539 /* ScheduleRequestService.swift in Sources */,
 				780732092B9374BB008A184D /* YPTravelSchedulerApp.swift in Sources */,
+				789B40F62BD31D0C00DC3CB4 /* SettingsRouter.swift in Sources */,
+				78C132792BD1B5CB00ABB205 /* SettingsDestination.swift in Sources */,
+				78C132742BD1B28600ABB205 /* MainDestination.swift in Sources */,
+				78C132712BD1B22900ABB205 /* Binging+hashable.swift in Sources */,
+				783A64142BCC68EE00AFA46F /* Symbol.swift in Sources */,
+				78529B2B2BC2C1FF004FDD74 /* Story.swift in Sources */,
+				78529B312BC2CC91004FDD74 /* ProgressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,7 +656,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -443,7 +712,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -453,7 +722,6 @@
 		};
 		780732152B9374BD008A184D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D5A00C3034EC9DD9881E798 /* Pods-YP-TravelScheduler.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -464,28 +732,35 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "YP-TravelScheduler/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Travel Scheduler";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.deviant.studios.YP-TravelScheduler";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
+				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -494,7 +769,6 @@
 		};
 		780732162B9374BD008A184D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9C37A5BDDD68F64FD04D07BE /* Pods-YP-TravelScheduler.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -505,28 +779,35 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "YP-TravelScheduler/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Travel Scheduler";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.deviant.studios.YP-TravelScheduler";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
+				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
