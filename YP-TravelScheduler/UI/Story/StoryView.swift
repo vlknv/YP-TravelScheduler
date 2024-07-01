@@ -28,6 +28,8 @@ extension StoryView: View {
             
             content
             
+            actions
+            
             controls
                 .padding(.horizontal, 12)
         }
@@ -37,11 +39,27 @@ extension StoryView: View {
                 dismiss()
             }
         }
+        .gesture(
+            DragGesture()
+                .onEnded { value in
+                    if value.translation.width < 0 {
+                        viewModel.onNext()
+                    }
+                    
+                    if value.translation.width > 0 {
+                        viewModel.onPrevious()
+                    }
+                    
+                    if value.translation.height > 0 {
+                        viewModel.onClose()
+                    }
+                }
+        )
     }
     
     private var content: some View {
         ZStack {
-            if let image = viewModel.storyToShow?.fullscreenImage {
+            if let image = viewModel.currentStory?.fullscreenImage {
                 Image(image)
                     .resizable()
                     .scaledToFit()
@@ -51,12 +69,12 @@ extension StoryView: View {
             VStack(alignment: .leading, spacing: 16) {
                 Spacer()
                 
-                if let title = viewModel.storyToShow?.title {
+                if let title = viewModel.currentStory?.title {
                     Text(title)
                         .font(.system(size: 34, weight: .bold))
                 }
                 
-                if let details = viewModel.storyToShow?.details {
+                if let details = viewModel.currentStory?.details {
                     Text(details)
                         .font(.system(size: 20))
                 }
@@ -65,6 +83,19 @@ extension StoryView: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.bottom, 40)
             .padding(.horizontal, 16)
+        }
+        .animation(.linear(duration: 0.1), value: viewModel.currentStory)
+    }
+    
+    private var actions: some View {
+        HStack(spacing: 0) {
+            Color.white
+                .opacity(0.001)
+                .onTapGesture(perform: viewModel.onPrevious)
+            
+            Color.white
+                .opacity(0.001)
+                .onTapGesture(perform: viewModel.onNext)
         }
     }
     

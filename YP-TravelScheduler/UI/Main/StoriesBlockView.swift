@@ -59,10 +59,12 @@ struct StoriesBlockView: View {
 
 #Preview {
     final class PreviewViewModel: StoryViewModelProtocol {
-        let storyToShow: Story? = nil
+        let currentStory: Story? = nil
         let progressViewModels: [ProgressViewModel] = []
         
         func onAppear(startStory: Story) { }
+        func onNext() { }
+        func onPrevious() { }
         func onClose() { }
     }
     
